@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Menu, ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion"; // ✅ NEW
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);

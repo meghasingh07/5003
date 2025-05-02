@@ -50,7 +50,7 @@ export default function HeroSection({ onGetQuoteClick }) {
         <h1 className="text-white text-[2.5rem]  sm:text-[3rem] md:text-[8rem] lg:text-[11rem] font-extrabold leading-[1.1] md:leading-[1.05]">
           <span className="relative inline-block mr-2">
             <span className="relative z-10">
-              <AnimatedLetters text="first" delayStart={0} />
+              <AnimatedLetters text="Strong" delayStart={0} />
             </span>
             <img
               src="/underline.svg"
@@ -59,21 +59,21 @@ export default function HeroSection({ onGetQuoteClick }) {
             />
           </span>
           <span className="inline-block">
-            <AnimatedLetters text="class" delayStart={0.4} />
+            <AnimatedLetters text="And" delayStart={0.4} />
           </span>
           <span className="block">
-            <AnimatedLetters text="investments" delayStart={0.8} />
+            <AnimatedLetters text="Leak-Free &nbsp; Pipes" delayStart={0.8} />
           </span>
         </h1>
 
         <p className="mt-4 text-lg text-gray-200 max-w-lg">
-          Take your business to the next level. Hub's built-in risk and profit
-          management tools.
+        Get reliable pipes for today’s advanced needs. Vihan is the spine of modern plumbing. 
+
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <button
             onClick={onGetQuoteClick}
-            className="bg-yellow-400 text-black px-8 py-4 font-bold rounded-md text-lg"
+            className="bg-yellow-400 hover:bg-[#0F3E3D] text-black hover:text-amber-50 px-8 py-4 font-bold rounded-md text-lg"
           >
             Get a quote
           </button>

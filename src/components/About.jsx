@@ -35,18 +35,23 @@ const About = ({ formRef }) => {
   const [submittedName, setSubmittedName] = useState("");
 
   return (
-    <div id="about"  className="relative max-w-7xl mx-auto px-4 md:px-8 mt-10 pb-20">
+    <div
+      id="about"
+      className="relative max-w-7xl mx-auto px-4 md:px-8 mt-10 pb-20"
+    >
       <div className="grid md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center">
           <h3 className="text-sm font-bold text-gray-800 ">about us</h3>
           <h2 className="text-4xl font-bold text-gray-900 mt-2">
-            consulting agency <br /> for your business.
+            Plastic Pipes Are <br />
+            Built For Durability.
           </h2>
           <p className="mt-4 text-gray-600">
-            Hub has a full range of products for personal data analysis,
-            business consultation, and strategic partnership. Hub allows your
-            business and technology computers to store, transmit, analyze, and
-            manipulate big data.
+            Since 1994, Vihan has been a trusted pipe solution partner for many
+            households and building infrastructure. Vihan offers a range of
+            products, such as PVC pipe bending, pipe packaging, cutter series,
+            and more. Vihan provides your infrastructure smart pipe solutions
+            that never crack under pressure.
           </p>
         </div>
 
