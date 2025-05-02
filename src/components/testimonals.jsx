@@ -12,7 +12,7 @@ const testimonials = [
     title: "Designer",
   },
   {
-    text: "I’ve never had an easier experience building a website. It’s intuitive and powerful — perfect for solo entrepreneurs like me.",
+    text: "I've never had an easier experience building a website. It’s intuitive and powerful — perfect for solo entrepreneurs like me.",
     author: "River",
     title: "Freelancer",
   },
@@ -36,15 +36,14 @@ export default function TestimonialSection() {
       style={{ backgroundImage: "url('/testimonals.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/70 z-0" />
-
       <div className="relative z-10 grid lg:grid-cols-2 items-center gap-10">
         <div>
           <h2 className="text-yellow-400 text-4xl font-bold mb-6">
             testimonials
           </h2>
-          <p className="text-xl leading-relaxed max-w-xl mb-6">
+          <div className="min-h-[140px] text-xl leading-relaxed max-w-xl mb-6">
             {testimonial.text}
-          </p>
+          </div>
           <p className="text-gray-300 font-semibold">
             {testimonial.author}, {testimonial.title}
           </p>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import './case.css';
 const cardData = [
   {
     title: "grow your brand and business",
@@ -32,26 +32,24 @@ export default function CaseStudies() {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="group bg-gray-100 hover:bg-[#083c3c] transition-all duration-300 rounded-xl p-6 h-60 flex flex-col items-center justify-center text-center cursor-pointer"
+            className="group bg-gray-100 hover:bg-[#083c3c] transition-all duration-300 rounded-xl p-6 h-60 flex flex-col items-center justify-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transform"
           >
             <img
               src={card.image}
               alt={card.title}
-              className="w-16 h-16 object-contain mb-4 transition duration-300 group-hover:invert group-hover:brightness-200"
+              className="w-16 h-16 object-contain mb-4 transition-transform duration-300 transform group-hover:scale-110"
             />
-
-            <h3 className="text-sm font-semibold text-[#083c3c] group-hover:text-white transition-colors duration-300 px-2">
+            <h3 className="text-base md:text-lg font-semibold text-[#083c3c] group-hover:text-white transition-colors duration-300 px-2">
               {card.title}
             </h3>
-
-            <p className="text-white opacity-0 group-hover:opacity-100 mt-2 transition-opacity duration-300 text-sm font-semibold">
+            <p className="text-white opacity-0 group-hover:opacity-100 mt-2 transition duration-300 text-sm font-medium hover:text-yellow-400 cursor-pointer  learn-more-text">
               Learn more ↑
             </p>
           </div>
         ))}
       </div>
 
-      <p className="mt-12 text-[#083c3c] font-semibold cursor-pointer hover:underline transition duration-200">
+      <p className="mt-12 text-[#083c3c] font-semibold cursor-pointer hover:underline hover:text-yellow-500 transition duration-200 text-lg">
         See more services
       </p>
     </div>

@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Dialog } from "@headlessui/react";
-import { Play, ChevronDown } from "lucide-react";
+import { Play } from "lucide-react";
 import AnimatedLetters from "./AnimatedLetters";
 import NavBarTop from "./NavBarTop";
 import NavBarMain from "./NavBarMain";
 
 export default function HeroSection({ onGetQuoteClick }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isPagesOpen, setIsPagesOpen] = useState(false);
-  const [isMobilePagesOpen, setIsMobilePagesOpen] = useState(false);
 
   const langRef = useRef(null);
   const pagesRef = useRef(null);
@@ -27,21 +25,6 @@ export default function HeroSection({ onGetQuoteClick }) {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-  const menuItems = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Pages", hasDropdown: true },
-    { label: "News", href: "#news" },
-    { label: "Contact", href: "#contact" },
-  ];
-
-  const handleNavigation = (href) => {
-    setIsMobileOpen(false);
-    setTimeout(() => {
-      window.location.href = href;
-    }, 200);
-  };
 
   return (
     <div
@@ -60,7 +43,6 @@ export default function HeroSection({ onGetQuoteClick }) {
           isPagesOpen={isPagesOpen}
           setIsPagesOpen={setIsPagesOpen}
           pagesRef={pagesRef}
-          setIsMobileOpen={setIsMobileOpen}
         />
       </div>
 
@@ -133,64 +115,6 @@ export default function HeroSection({ onGetQuoteClick }) {
             title="YouTube video"
             allowFullScreen
           ></iframe>
-        </div>
-      </Dialog>
-
-      <Dialog
-        open={isMobileOpen}
-        onClose={() => setIsMobileOpen(false)}
-        className="fixed inset-0 cursor-pointer z-50 h-110 bg-white text-black"
-      >
-        <div className="p-6 space-y-6">
-          <div className="flex justify-between items-center border-b pb-4">
-            <div className="flex items-center gap-2 font-bold text-xl">
-              <span className="w-3 h-3 rounded-full bg-yellow-400"></span> hub
-            </div>
-            <button
-              onClick={() => setIsMobileOpen(false)}
-              className="text-2xl font-bold"
-            >
-              &times;
-            </button>
-          </div>
-
-          <div className="space-y-4 font-semibold text-lg">
-            {menuItems.map((item, index) =>
-              item.hasDropdown ? (
-                <div key={index}>
-                  <div
-                    className="flex justify-between items-center border-b pb-2 cursor-pointer"
-                    onClick={() => setIsMobilePagesOpen(!isMobilePagesOpen)}
-                  >
-                    <span>{item.label}</span>
-                    <ChevronDown
-                      className={`w-5 h-5 transition-transform ${
-                        isMobilePagesOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </div>
-                  {isMobilePagesOpen && (
-                    <div className="pl-4 pt-2 space-y-2 text-base text-gray-600 cursor-pointer">
-                      <div
-                        className="border-b pb-2"
-                        onClick={() => handleNavigation("#what-we-do")}
-                      >
-                        What We Do
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <div
-                  key={index}
-                  className="border-b pb-2 cursor-pointer"
-                  onClick={() => handleNavigation(item.href)}
-                >
-                  {item.label}
-                </div>
-              )
-            )}
-          </div>
         </div>
       </Dialog>
     </div>

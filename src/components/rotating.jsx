@@ -17,30 +17,27 @@ export default function Rotating() {
     controls.start({
       x: ["0%", "-50%"],
       transition: {
-        duration: 10,
+        duration: 8,
         ease: "linear",
         repeat: Infinity,
       },
     });
   }, [controls]);
 
-  const handlePause = () => {
-    controls.stop();
-  };
-
-  const handleResume = () => {
+  const handlePause = () => controls.stop();
+  const handleResume = () =>
     controls.start({
       x: ["0%", "-50%"],
       transition: {
-        duration: 10,
+        duration:8,
         ease: "linear",
         repeat: Infinity,
       },
     });
-  };
 
   return (
     <div className="w-full overflow-hidden">
+     
       <div
         className="bg-fixed bg-center bg-cover h-[450px] flex items-center justify-center relative"
         style={{ backgroundImage: "url('/fixed-bg.jpg')" }}
@@ -52,8 +49,8 @@ export default function Rotating() {
         </h1>
       </div>
 
-      {/* Logo Marquee */}
-      <div className="bg-white py-10 px-4 text-center">
+     
+      <div className="bg-gradient-to-r from-white to-gray-100 py-12 px-4 text-center shadow-inner">
         <p className="text-gray-600 text-lg mb-8">
           Join the 10,000+ companies trusting LandingHub
         </p>
@@ -69,7 +66,7 @@ export default function Rotating() {
                 key={idx}
                 src={src}
                 alt={`logo-${idx}`}
-                className="h-10 w-auto mx-8"
+                className="h-10 w-auto mx-10 grayscale hover:grayscale-0 transition duration-300"
               />
             ))}
           </motion.div>

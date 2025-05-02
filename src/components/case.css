@@ -1,0 +1,12 @@
+.learn-more-text {
+    transform: scale(1);
+    transition: 
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      color 0.3s ease;
+  }
+  
+  .learn-more-text:hover {
+    transform: scale(1.20);
+  }
+  

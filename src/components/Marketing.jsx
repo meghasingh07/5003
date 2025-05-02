@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
@@ -24,39 +23,47 @@ export default function MarketingTeamPage() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-10 font-sans">
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex flex-col justify-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#0F3E3D] leading-tight">
+    <div className="bg-white flex items-center justify-center py-12 px-4 md:px-10">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        {/* Left Section */}
+        <div className="flex flex-col justify-center space-y-5">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#0F3E3D] leading-tight">
             leading the best <br /> marketing team.
           </h1>
-          <p className="text-gray-500 max-w-md">
+          <p className="text-gray-500 max-w-md text-sm md:text-base">
             We help our clients succeed by creating brand identities, digital
             experiences, and print materials that communicate clearly, achieve
             marketing.
           </p>
-          <button className="bg-[#FFD129] text-[#0F3E3D] font-semibold px-8 py-4 w-fit rounded shadow hover:shadow-lg transition-all">
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-[#FFD129] hover:bg-[#0F3E3D] text-[#0F3E3D] hover:text-amber-50 font-semibold px-6 py-3 w-fit rounded shadow hover:shadow-lg transition-all duration-300 text-sm md:text-base mx-auto md:mx-0"
+          >
             learn more
-          </button>
+          </motion.button>
         </div>
 
-        <div className="flex flex-col justify-center space-y-6">
+        <div className="flex flex-col justify-center space-y-4">
           {services.map((service, index) => (
-            <div key={index} className="flex flex-col space-y-2">
+            <div key={index} className="flex flex-col space-y-1">
               <div
                 onClick={() => setActiveIndex(index)}
-                className={`cursor-pointer flex items-center justify-between px-6 py-4 rounded transition-all duration-300 ${
+                className={`cursor-pointer flex items-center justify-between px-6 py-3 rounded transition-all duration-300 ${
                   index === activeIndex
                     ? "bg-[#0F3E3D] text-white"
                     : "text-[#0F3E3D] border-l-4 border-[#0F3E3D]"
                 }`}
               >
-                <h3 className="text-lg font-semibold">{service.title}</h3>
+                <h3 className="text-base md:text-lg font-semibold">
+                  {service.title}
+                </h3>
                 {index === activeIndex && <span className="text-xl">«</span>}
               </div>
 
-              {index === activeIndex && (
-                <AnimatePresence>
+              <AnimatePresence>
+                {index === activeIndex && (
                   <motion.p
                     key="description"
                     initial={{ opacity: 0, height: 0 }}
@@ -66,8 +73,8 @@ export default function MarketingTeamPage() {
                   >
                     {service.description}
                   </motion.p>
-                </AnimatePresence>
-              )}
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

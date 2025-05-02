@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 
 export default function InvestmentHeroSection() {
   return (
-    <section className="min-h-screen bg-white font-sans px-6 lg:px-20 py-12">
+    <section className="min-h-screen bg-white font-sans pl-8 pr-4 sm:pl-12 sm:pr-6 lg:pl-36 lg:pr-10 py-12">
+
+
       <div className="grid lg:grid-cols-2 gap-10 items-center">
         <div className="relative flex justify-center items-center">
           <motion.img
@@ -33,7 +35,7 @@ export default function InvestmentHeroSection() {
             companys vision
           </p>
           <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            Investing in the <br /> digital future.
+            Investing in the<br />   digital future.
           </h1>
           <p className="text-gray-600 mb-6 max-w-md">
             Hub IT allows your business and technology computers to store,
@@ -55,7 +57,7 @@ export default function InvestmentHeroSection() {
 
     
       <motion.div
-        className="mt-20 bg-white border border-gray-200 rounded-xl shadow-sm p-6 flex flex-col sm:flex-row sm:justify-around sm:items-center gap-6 text-center"
+        className="mt-20 bg-white border cursor-pointer border-gray-200 rounded-xl shadow-sm p-6 flex flex-col sm:flex-row sm:justify-around sm:items-center gap-6 text-center"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
