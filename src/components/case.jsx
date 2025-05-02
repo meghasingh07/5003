@@ -20,7 +20,7 @@ const cardData = [
   },
   {
     title: "Belling or Scoketing",
-    image: "/Pipe Packaging0.webp",
+    image: "/logoo.webp",
   },
   {
     title: "Cutter Series",
