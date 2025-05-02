@@ -4,7 +4,7 @@ const cardData = [
   {
     id: 1,
     name: "Rohit Sharma",
-    role: "Finance Lead",
+    role: "Director",
     linkedin: "https://linkedin.com/in/rohit-sharma",
     image: "/flip-img-2.webp",
     backText:
@@ -13,7 +13,7 @@ const cardData = [
   {
     id: 2,
     name: "Rohan Mehta",
-    role: "Data Analyst",
+    role: "Director",
     linkedin: "https://linkedin.com/in/priyamehta",
     image: "/flip-img-1.webp",
     backText:
@@ -22,7 +22,7 @@ const cardData = [
   {
     id: 3,
     name: "Ankit Verma",
-    role: "Consulting Director",
+    role: " Director",
     linkedin: "https://linkedin.com/in/ankitverma",
     image: "/flip-img-3.webp",
     backText:
