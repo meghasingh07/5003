@@ -15,7 +15,7 @@ const contactIcons = {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0A2C2C] text-white py-12 px-6 md:px-20">
+    <footer className="bg-black text-white py-12 px-6 md:px-20">
       <div className="grid md:grid-cols-3 gap-10">
         {/* Company Info */}
         <motion.div

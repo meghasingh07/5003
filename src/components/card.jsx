@@ -36,11 +36,9 @@ export default function FlipCardsSection() {
   return (
     <div className="bg-white py-20">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#0F3E3D] mb-2">Our Team Experts
-        </h2>
+        <h2 className="text-4xl font-bold text-black mb-2">Our Team Experts</h2>
         <p className="text-gray-500 max-w-xl mx-auto">
-        We’re trusted machinery partners for world-class pipes.
-
+          We’re trusted machinery partners for world-class pipes.
         </p>
       </div>
 
@@ -73,26 +71,26 @@ export default function FlipCardsSection() {
                 <div className="flex flex-col justify-end h-full p-6 space-y-2 bg-black/40">
                   <div className="text-white text-xl font-bold">{card.name}</div>
                   <div className="text-white text-sm">{card.role}</div>
-                  <a
-                    href={card.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white underline text-sm hover:text-yellow-300"
-                  >
-                    View LinkedIn
-                  </a>
                 </div>
               </div>
 
               {/* BACK SIDE */}
               <div
-                className="absolute w-full h-full bg-[#0F3E3D] text-white rounded-xl p-6 flex items-center justify-center"
+                className="absolute w-full h-full bg-[#004b93] text-white rounded-xl p-6 flex flex-col items-center justify-center space-y-4"
                 style={{
                   transform: "rotateY(180deg)",
                   backfaceVisibility: "hidden",
                 }}
               >
                 <p className="text-center text-sm max-w-xs">{card.backText}</p>
+                <a
+                  href={card.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white underline text-sm hover:text-yellow-300"
+                >
+                  View LinkedIn
+                </a>
               </div>
             </div>
           </div>

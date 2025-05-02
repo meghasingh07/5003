@@ -47,7 +47,7 @@ export default function Rotating() {
         Technology-Driven Machines  
  
         <br />
-        Create Pipes That Build<span className="text-[#004b93]">&nbsp;Nations</span>
+        Create Pipes That Build<span className="text-black">&nbsp;Nations</span>
         </h1>
       </div>
 

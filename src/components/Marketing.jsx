@@ -27,7 +27,7 @@ export default function MarketingTeamPage() {
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Section */}
         <div className="flex flex-col justify-center space-y-5">
-          <h1 className="text-3xl md:text-5xl font-bold text-[#0F3E3D] leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-black leading-tight">
           Crafting The Future Of Pipe 
           Manufacturing Machines.
           </h1>
@@ -39,7 +39,7 @@ export default function MarketingTeamPage() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#0F3E3D] hover:bg-[#0F3E3D] text-black hover:text-amber-50 font-semibold px-6 py-3 w-fit rounded shadow hover:shadow-lg transition-all duration-300 text-sm md:text-base mx-auto md:mx-0"
+            className="bg-[#004b93] text-white hover:text-white font-semibold px-6 py-3 w-fit rounded shadow hover:shadow-lg transition-all duration-300 text-sm md:text-base mx-auto md:mx-0"
           >
             Learn more
           </motion.button>
@@ -52,8 +52,8 @@ export default function MarketingTeamPage() {
                 onClick={() => setActiveIndex(index)}
                 className={`cursor-pointer flex items-center justify-between px-6 py-3 rounded transition-all duration-300 ${
                   index === activeIndex
-                    ? "bg-[#0F3E3D] text-white"
-                    : "text-[#0F3E3D] border-l-4 border-[#0F3E3D]"
+                    ? "bg-[#004b93] text-white"
+                    : "text-[#0F3E3D] border-l-4 border-[#004b93]"
                 }`}
               >
                 <h3 className="text-base md:text-lg font-semibold">

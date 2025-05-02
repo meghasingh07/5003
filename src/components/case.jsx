@@ -38,7 +38,7 @@ export default function CaseStudies() {
 
   return (
     <div className="text-center py-20 bg-white px-4 md:px-12 lg:px-20">
-      <h2 className="text-4xl font-bold text-[#083c3c] mb-4">Our Products</h2>
+      <h2 className="text-4xl font-bold text-black mb-4">Our Products</h2>
       <p className="text-gray-600 max-w-xl mx-auto mb-12">
         Get worry-free pipe producing solutions. Choose from our range of
         machinery to shape pipeline requirements.
@@ -58,7 +58,7 @@ export default function CaseStudies() {
 
       <button
         type="button"
-        className="mt-12 text-white bg-[#004b93] hover:bg-[#083c3c] font-semibold cursor-pointer hover:text-black transition duration-200 text-lg px-6 py-3 rounded"
+        className="mt-12 text-white bg-[#004b93] font-semibold cursor-pointer hover:text-black transition duration-200 text-lg px-6 py-3 rounded"
       >
         See more products
       </button>

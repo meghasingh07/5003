@@ -66,7 +66,7 @@ const About = ({ formRef }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="px-6 py-2 bg-[#004b93] hover:bg-[#0F3E3D] text-white text-sm font-semibold rounded shadow-md"
+              className="px-6 py-2 bg-[#004b93]   text-white hover:text-black text-sm font-semibold rounded shadow-md"
             >
               Know More
             </motion.button>

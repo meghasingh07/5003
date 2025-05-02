@@ -50,7 +50,7 @@ export default function HeroSection({ onGetQuoteClick }) {
               <AnimatedLetters text="Pipe-Making" delayStart={0} />
             </span>
             <img
-              src="/underline.svg"
+              src="/underline.png"
               alt=""
               className="absolute bottom-0 left-0 w-full h-2 sm:h-3 md:h-5 z-0"
             />
@@ -71,7 +71,7 @@ export default function HeroSection({ onGetQuoteClick }) {
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <button
             onClick={onGetQuoteClick}
-            className="bg-[#004b93] hover:bg-[#0F3E3D] text-black hover:text-amber-50 px-8 py-4 font-bold rounded-md text-lg"
+            className="bg-[#004b93]  text-white hover:text-black px-8 py-4 font-bold rounded-md text-lg"
           >
             Get a quote
           </button>

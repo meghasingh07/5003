@@ -27,7 +27,7 @@ const HubNews = () => {
     return (
       <section id="news" className="py-16 px-4 md:px-20 bg-white">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#0A2C2C]">Blog Posts </h2>
+          <h2 className="text-4xl font-bold text-black">Blog Posts </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
           Get useful insights from the world of plastic pipe solutions. 
 
