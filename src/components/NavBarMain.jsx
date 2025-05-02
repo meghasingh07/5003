@@ -8,13 +8,14 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
   const [isMobilePagesOpen, setIsMobilePagesOpen] = useState(false);
 
   const menuItems = [
-    { num: "01", label: "Home", href: "/" },
-    { num: "02", label: "About Us", href: "#about" },
-    { num: "03", label: "Services", href: "#services" },
-    { num: "04", label: "Pages", hasDropdown: true },
-    { num: "05", label: "News", href: "#news" },
-    { num: "06", label: "Contact", href: "/contact" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "#about" },
+    { label: "Our Products", href: "#services" },
+    { label: "Enquiry form", hasDropdown: true },
+    { label: "News", href: "#news" },
+    { label: "Contact", href: "/contact" },
   ];
+  
 
   const handleNavigation = (href) => {
     setIsMobileOpen(false);
@@ -25,7 +26,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
 
   return (
     <>
-      <div className="flex justify-between items-center px-6 md:px-16 py-3 bg-black/30 backdrop-blur">
+      <div className="flex justify-between items-center px-6 md:px-16 py-3 backdrop-blur">
         <div className="flex items-center gap-2 font-bold text-xl">
           <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
         </div>
@@ -34,18 +35,16 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
           {menuItems.map((item, i) => (
             <div
               key={i}
-              className="relative flex items-start gap-1 font-bold hover:text-yellow-400"
+              className="relative flex items-start gap-1 font-bold hover:text-[#004b93]"
             >
               {item.hasDropdown ? (
                 <div ref={pagesRef} className="relative z-50">
                   <div
                     onClick={() => setIsPagesOpen(!isPagesOpen)}
-                    className="flex items-center gap-1 cursor-pointer hover:text-yellow-400"
+                    className="flex items-center gap-1 cursor-pointer hover:text-[#004b93]"
                   >
                     {item.label}
-                    <span className="text-xs text-white translate-y-[-6px] hidden md:inline-block">
-                      {item.num}
-                    </span>
+                    
                   </div>
                   {isPagesOpen && (
                     <div className="absolute left-0 top-full mt-2 w-48 bg-white text-black rounded-md shadow-lg z-[100]">
@@ -61,7 +60,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
                 <>
                   <a
                     href={item.href}
-                    className="cursor-pointer hover:text-yellow-400"
+                    className="cursor-pointer hover:text-[#004b93]"
                   >
                     {item.label}
                   </a>
@@ -74,7 +73,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
           ))}
           <div className="text-left text-sm pl-6 border-l border-white/30">
             <p>call us now</p>
-            <p className="text-yellow-400 text-lg font-bold">+91-9099032638</p>
+            <p className="text-white text-lg font-bold">+91-9099032638</p>
           </div>
         </div>
 

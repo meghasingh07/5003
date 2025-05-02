@@ -3,24 +3,19 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   {
-    title: "Crafting The Future Of Quality Plastic Pipes.",
+    title: "Engineering Brilliance For Pipe Plants.",
     description:
-      "We help our customers in building smart infrastructure through our reliable pipe solutions. ",
+      "We engineer machines that solve day-to-day problems. Create pipes with no cracks, only seamless flow.",
   },
   {
-    title: "Excellent Flowing Quality.",
+    title: "Building Performance-First Machines.",
     description:
-      "We create plastic pipes that solve day-to-day problems. No cracks, only seamless flow.",
-  },
-  {
-    title: "Building The Future Of Fluid Transport.",
-    description:
-      "We aim to stay excellent with every pipe for future-proofing solutions.",
+      "We aim to elevate your pipe production line with our machinery. Evolve pipe industry through our innovative technology.",
   },
   {
     title: "Eco-Friendly Method Of Manufacturing",
     description:
-      "Our manufacturing process follows non-polluting methods, revolutionizing pipe solutions.",
+      "Our machines perform non-polluting methods, revolutionizing raw materials into pipe perfection.",
   },
 ];
 
@@ -33,20 +28,20 @@ export default function MarketingTeamPage() {
         {/* Left Section */}
         <div className="flex flex-col justify-center space-y-5">
           <h1 className="text-3xl md:text-5xl font-bold text-[#0F3E3D] leading-tight">
-            leading the best <br /> marketing team.
+          Crafting The Future Of Pipe 
+          Manufacturing Machines.
           </h1>
           <p className="text-gray-500 max-w-md text-sm md:text-base">
-            We help our clients succeed by creating brand identities, digital
-            experiences, and print materials that communicate clearly, achieve
-            marketing.
+          We help our customers in building smart infrastructure through our reliable and smart machines. 
+
           </p>
 
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#FFD129] hover:bg-[#0F3E3D] text-[#0F3E3D] hover:text-amber-50 font-semibold px-6 py-3 w-fit rounded shadow hover:shadow-lg transition-all duration-300 text-sm md:text-base mx-auto md:mx-0"
+            className="bg-[#0F3E3D] hover:bg-[#0F3E3D] text-black hover:text-amber-50 font-semibold px-6 py-3 w-fit rounded shadow hover:shadow-lg transition-all duration-300 text-sm md:text-base mx-auto md:mx-0"
           >
-            learn more
+            Learn more
           </motion.button>
         </div>
 

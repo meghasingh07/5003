@@ -23,7 +23,7 @@ export default function NavBarTop() {
   }, []);
 
   return (
-    <div className="relative z-30 hidden md:flex justify-between items-center px-6 md:px-16 py-3 border-b border-white/20 bg-black/30 backdrop-blur text-sm">
+    <div className="relative z-30 hidden md:flex justify-between items-center px-6 md:px-16 py-3 border-b border-white/20  backdrop-blur text-sm">
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-2">
           <img src="/mail.svg" alt="mail" className="w-4 h-4 invert" />
@@ -32,14 +32,14 @@ export default function NavBarTop() {
         <div className="border-l border-white/40 h-5"></div>
         <div className="flex items-center gap-2">
           <img src="/street.svg" alt="location" className="w-4 h-4 invert" />
-          14th Street, Soho
+          Ahmedabad: 380058, Gujarat, India
         </div>
       </div>
       <div className="flex items-center gap-6">
         <span
           id="consultation"
           className="cursor-pointer"
-          onClick={handleScrollToAbout} // Scroll to About section
+          onClick={handleScrollToAbout} 
         >
           Consultation
         </span>

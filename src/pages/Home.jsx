@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import Map from "../components/Map";
 import HubNews from "../components/News";
 import TestimonialSection from "../components/testimonals";
-import InvestmentHeroSection from "../components/invest";
 import MarketingTeamPage from "../components/Marketing";
 import FlipCardsSection from "../components/card";
 import Rotating from "../components/rotating";
@@ -27,7 +26,7 @@ const Home = () => {
       <Rotating/>
       <FlipCardsSection/>
       <MarketingTeamPage/>
-      <InvestmentHeroSection/>
+      
       <TestimonialSection/>
       <HubNews/>
       <Map/>

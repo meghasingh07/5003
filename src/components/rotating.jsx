@@ -44,9 +44,10 @@ export default function Rotating() {
       >
         <div className="absolute inset-0 bg-[#083c3c]/90 z-0" />
         <h1 className="relative z-10 text-white text-3xl md:text-5xl font-bold text-center px-6 leading-snug">
-        Each Inch Of Pipe  
+        Technology-Driven Machines  
+ 
         <br />
-        Creates Flow That Builds<span className="text-yellow-400"> Nations.</span>
+        Create Pipes That Build<span className="text-[#004b93]">&nbsp;Nations</span>
         </h1>
       </div>
 

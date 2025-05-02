@@ -2,12 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 
-const footerLinks = {
-  useful: ["Management", "Reporting", "Press", "Company", "Careers"],
-  company: ["Company", "Careers", "Press media", "Our Blog"],
-  bottom: ["Management", "Reporting", "Press", "Company", "Careers"],
-};
-
 const socialIcons = [
   { src: "/facebook.svg", alt: "Facebook" },
   { src: "/instgram.svg", alt: "Instagram" },
@@ -16,25 +10,24 @@ const socialIcons = [
 
 const contactIcons = {
   email: "/mail1.svg",
-  location: "/location.svg"
+  location: "/location.svg",
 };
 
 const Footer = () => {
   return (
     <footer className="bg-[#0A2C2C] text-white py-12 px-6 md:px-20">
-      <div className="grid md:grid-cols-4 gap-10">
-        {/* Left Section with images */}
+      <div className="grid md:grid-cols-3 gap-10">
+        {/* Company Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-2 mb-4">
-            <img src="/logo.svg" alt="hub logo" className="h-8" />
+            <img src="/logoo.webp" alt="Vihan Logo" className="h-8" />
           </div>
           <p className="text-gray-300">
-            Hub IT allows your business and technology computers to store,
-            transmit, analyze, and manipulate big data.
+            Vihan offers innovative, durable plastic piping solutions for homes and infrastructure across India since 1994.
           </p>
           <div className="flex space-x-4 mt-6 text-xl">
             {socialIcons.map((icon, i) => (
@@ -48,84 +41,74 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Contact Section */}
+        {/* Address & Office Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="font-semibold text-lg mb-4">Contact</h3>
-          <div className="space-y-3 text-gray-300">
-            <div className="flex items-start gap-3">
-              <img src={contactIcons.email} alt="Email" className="h-5 mt-1" />
-              <div>
-                <p>Looking for collaboration?</p>
-                <a href="mailto:hub@liquid.com" className="text-white hover:underline">
-                  hub@liquid.com
-                </a>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <img src={contactIcons.location} alt="Location" className="h-5 mt-1" />
-              <div>
-                <p>Visit our Local Store</p>
-                <p className="text-white">14th Street, Soho</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <FaPhoneAlt className="text-yellow-400 mt-1" />
-              <div>
-                <p>Monday–Friday: 08am–9pm</p>
-                <p className="text-white">+(1) 123 456 7890</p>
-              </div>
-            </div>
+          <h3 className="font-semibold text-lg mb-4">Our Address</h3>
+          <p className="text-gray-300 mb-2">
+            <strong>Registered Office and Works:</strong><br />
+            Block No. 22B, Near Claris Pharmaceuticals, Sarkhej - Bavla Highway,<br />
+            Ahmedabad: 382213, Gujarat, India
+          </p>
+          <p className="text-gray-300 mb-2">
+            <strong>Corporate Office:</strong><br />
+            613 & 614, B Block, Navratna Corporate Park,<br />
+            Bopal - Ambli Road, Ahmedabad: 380058, Gujarat, India
+          </p>
+          <div className="mt-4">
+            <p className="text-white font-semibold">Email:</p>
+            <a href="mailto:sales@vihanindia.com" className="text-gray-300 hover:underline">
+              sales@vihanindia.com
+            </a>
+            <br />
+            <a href="mailto:service@vihanindia.com" className="text-gray-300 hover:underline">
+              service@vihanindia.com
+            </a>
           </div>
         </motion.div>
 
-        {/* Useful Links */}
+        {/* Opening Hours */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h3 className="font-semibold text-lg mb-4">Useful Links</h3>
-          <ul className="space-y-2 text-gray-300">
-            {footerLinks.useful.map((link, i) => (
-              <li key={i} className="hover:text-yellow-400 transition">
-                {link}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Company Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="font-semibold text-lg mb-4">Company</h3>
-          <ul className="space-y-2 text-gray-300">
-            {footerLinks.company.map((link, i) => (
-              <li key={i} className="hover:text-yellow-400 transition">
-                {link}
-              </li>
-            ))}
-          </ul>
+          <h3 className="font-semibold text-lg mb-4">Opening Hours</h3>
+          <div className="text-gray-300 space-y-4">
+            <div>
+              <p><strong>Manufacturing Plant:</strong></p>
+              <p>8:30 AM - 05:40 PM IST</p>
+              <p>Monday - Saturday</p>
+              <p>1/3 Saturday C-OFF; Sunday WOFF</p>
+            </div>
+            <div>
+              <p><strong>Office Hours:</strong></p>
+              <p>8:30 AM - 05:40 PM IST</p>
+              <p>Monday - Saturday</p>
+              <p>1/3 Saturday C-OFF; Sunday WOFF</p>
+            </div>
+            <div className="mt-3">
+              <p className="text-white font-semibold">Sales:</p>
+              <p>+91-9099032638, +91-9510689295, +91-9510689272</p>
+              <p className="text-white font-semibold mt-2">Service:</p>
+              <p>+91-9510689218</p>
+            </div>
+          </div>
         </motion.div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
         <p>
-          ©2020 <span className="text-white">Hub Corporation</span>.
+          ©{new Date().getFullYear()} <span className="text-white">Vihan India</span>. All rights reserved.
         </p>
         <div className="flex gap-6 mt-4 md:mt-0">
-          {footerLinks.bottom.map((link, i) => (
-            <a key={i} href="#" className="hover:text-yellow-400 transition">
-              {link}
-            </a>
-          ))}
+          <a href="#" className="hover:text-[#004b93] transition">Privacy</a>
+          <a href="#" className="hover:text-[#004b93] transition">Terms</a>
+          <a href="#" className="hover:text-[#004b93] transition">Sitemap</a>
         </div>
       </div>
     </footer>

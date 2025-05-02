@@ -49,9 +49,13 @@ export default function InvestmentHeroSection() {
               <span className="mr-2">↗</span> First-Class Investments
             </li>
           </ul>
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-md shadow-lg transition-all">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-[#004b93] hover:bg-[#0F3E3D] text-black hover:text-amber-50 font-semibold px-6 py-3 w-fit rounded shadow hover:shadow-lg transition-all duration-300 text-sm md:text-base mx-auto md:mx-0"
+          >
             Get a quote
-          </button>
+          </motion.button>
         </motion.div>
       </div>
 

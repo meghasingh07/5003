@@ -1,43 +1,45 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const cardData = [
   {
     id: 1,
-    label: "finance",
-    title: "banking and business partnership",
-    image: "/flip-img-1.webp",
-    backType: "button",
+    name: "Rohit Sharma",
+    role: "Finance Lead",
+    linkedin: "https://linkedin.com/in/rohit-sharma",
+    image: "/flip-img-2.webp",
+    backText:
+      "Rohit leads our financial strategy with a sharp eye for detail and over 15 years of experience in corporate finance.",
   },
   {
     id: 2,
-    label: "analytics",
-    title: "big data integration for startups",
-    image: "/flip-img-2.webp",
-    backType: "text",
+    name: "Rohan Mehta",
+    role: "Data Analyst",
+    linkedin: "https://linkedin.com/in/priyamehta",
+    image: "/flip-img-1.webp",
     backText:
-      "As a partner of corporates, Liquid has more than 9,000 partners of all sizes and all potential of session.",
+      "Rohan specializes in big data integration and helps transform insights into real business decisions.",
   },
   {
     id: 3,
-    label: "consulting",
-    title: "analyzing company reports",
+    name: "Ankit Verma",
+    role: "Consulting Director",
+    linkedin: "https://linkedin.com/in/ankitverma",
     image: "/flip-img-3.webp",
-    backType: "button",
+    backText:
+      "Ankit brings a wealth of knowledge in business consulting, helping clients scale and optimize their operations.",
   },
 ];
 
 export default function FlipCardsSection() {
   const [hovered, setHovered] = useState(null);
-  const navigate = useNavigate();
 
   return (
     <div className="bg-white py-20">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#0F3E3D] mb-2">Global Experts
+        <h2 className="text-4xl font-bold text-[#0F3E3D] mb-2">Our Team Experts
         </h2>
         <p className="text-gray-500 max-w-xl mx-auto">
-        We're trusted pipe partners for our happy customers. 
+        We’re trusted machinery partners for world-class pipes.
 
         </p>
       </div>
@@ -52,14 +54,13 @@ export default function FlipCardsSection() {
             style={{ perspective: 1000 }}
           >
             <div
-              className={`relative w-full h-[400px] transition-transform duration-700`}
+              className="relative w-full h-[400px] transition-transform duration-700"
               style={{
                 transformStyle: "preserve-3d",
-                transform:
-                  hovered === index ? "rotateY(180deg)" : "rotateY(0deg)",
+                transform: hovered === index ? "rotateY(180deg)" : "rotateY(0deg)",
               }}
             >
-             
+              {/* FRONT SIDE */}
               <div
                 className="absolute w-full h-full rounded-xl overflow-hidden"
                 style={{
@@ -69,21 +70,21 @@ export default function FlipCardsSection() {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="flex flex-col justify-end h-full p-6 space-y-4 bg-black/30">
-                  {card.label && (
-                    <span className="inline-block px-3 py-1 bg-white text-[#0F3E3D] rounded text-sm font-semibold w-fit shadow">
-                      {card.label}
-                    </span>
-                  )}
-                  {card.title && (
-                    <div className="text-white text-2xl font-bold leading-snug">
-                      {card.title}
-                    </div>
-                  )}
+                <div className="flex flex-col justify-end h-full p-6 space-y-2 bg-black/40">
+                  <div className="text-white text-xl font-bold">{card.name}</div>
+                  <div className="text-white text-sm">{card.role}</div>
+                  <a
+                    href={card.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white underline text-sm hover:text-yellow-300"
+                  >
+                    View LinkedIn
+                  </a>
                 </div>
               </div>
 
-             
+              {/* BACK SIDE */}
               <div
                 className="absolute w-full h-full bg-[#0F3E3D] text-white rounded-xl p-6 flex items-center justify-center"
                 style={{
@@ -91,24 +92,7 @@ export default function FlipCardsSection() {
                   backfaceVisibility: "hidden",
                 }}
               >
-                {card.backType === "button" ? (
-                  <button
-                    onClick={() => navigate("/send-message")}
-                    className="bg-white text-[#0F3E3D] font-semibold px-6 py-3 rounded shadow hover:shadow-lg transition"
-                  >
-                    Send message
-                  </button>
-                ) : (
-                  <div className="flex flex-col items-center text-center gap-4">
-                    <p className="text-sm max-w-xs">{card.backText}</p>
-                    <button
-                      onClick={() => navigate("/send-message")}
-                      className="bg-white text-[#0F3E3D] font-semibold px-6 py-3 rounded shadow hover:shadow-lg transition"
-                    >
-                      Send message
-                    </button>
-                  </div>
-                )}
+                <p className="text-center text-sm max-w-xs">{card.backText}</p>
               </div>
             </div>
           </div>
