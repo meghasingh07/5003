@@ -87,7 +87,7 @@ export default function HeroSection({ onGetQuoteClick }) {
         </div>
       </div>
 
-      <div
+      {/* <div
         onClick={() => setIsOpen(true)}
         className="absolute flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 border-4 border-white rounded-full cursor-pointer transition hover:scale-110 bg-black/40
              left-44 bottom-1
@@ -116,7 +116,7 @@ export default function HeroSection({ onGetQuoteClick }) {
             allowFullScreen
           ></iframe>
         </div>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 }
