@@ -62,12 +62,12 @@ export default function HeroSection({ onGetQuoteClick }) {
             <AnimatedLetters text="And" delayStart={0.4} />
           </span>
           <span className="block">
-            <AnimatedLetters text="Leak-Free &nbsp; Pipes" delayStart={0.8} />
+            <AnimatedLetters text="Leak &nbsp;Free &nbsp; Pipes" delayStart={0.8} />
           </span>
         </h1>
 
         <p className="mt-4 text-lg text-gray-200 max-w-lg">
-        Get reliable pipes for today’s advanced needs. Vihan is the spine of modern plumbing. 
+        Get reliable pipes for today's advanced needs. Vihan is the spine of modern plumbing. 
 
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
