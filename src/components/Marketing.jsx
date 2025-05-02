@@ -3,19 +3,24 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   {
-    title: "First-class investment solutions",
+    title: "Crafting The Future Of Quality Plastic Pipes.",
     description:
-      "Hub IT allows your business and technology computers to store, transmit, analyze, and manipulate big data.",
+      "We help our customers in building smart infrastructure through our reliable pipe solutions. ",
   },
   {
-    title: "Building the idea of future",
+    title: "Excellent Flowing Quality.",
     description:
-      "Hub IT allows your business and technology computers to store, transmit, analyze, and manipulate big data.",
+      "We create plastic pipes that solve day-to-day problems. No cracks, only seamless flow.",
   },
   {
-    title: "Business consultation for startups",
+    title: "Building The Future Of Fluid Transport.",
     description:
-      "Hub IT allows your business and technology computers to store, transmit, analyze, and manipulate big data.",
+      "We aim to stay excellent with every pipe for future-proofing solutions.",
+  },
+  {
+    title: "Eco-Friendly Method Of Manufacturing",
+    description:
+      "Our manufacturing process follows non-polluting methods, revolutionizing pipe solutions.",
   },
 ];
 

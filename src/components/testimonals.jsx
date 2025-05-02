@@ -33,13 +33,13 @@ export default function TestimonialSection() {
   return (
     <section
       className="relative bg-cover  bg-no-repeat text-white py-20 px-6 lg:px-20"
-      style={{ backgroundImage: "url('/testimonals.jpg')" }}
+      style={{ backgroundImage: "url('/testimonials.webp')" }}
     >
       <div className="absolute inset-0 bg-black/70 z-0" />
       <div className="relative z-10 grid lg:grid-cols-2 items-center gap-10">
         <div>
           <h2 className="text-yellow-400 text-4xl font-bold mb-6">
-            testimonials
+          Testimonials 
           </h2>
           <div className="min-h-[140px] text-xl leading-relaxed max-w-xl mb-6">
             {testimonial.text}

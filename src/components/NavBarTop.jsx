@@ -27,7 +27,7 @@ export default function NavBarTop() {
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-2">
           <img src="/mail.svg" alt="mail" className="w-4 h-4 invert" />
-          invest@liquid.com
+          sales@vihanindia.com
         </div>
         <div className="border-l border-white/40 h-5"></div>
         <div className="flex items-center gap-2">

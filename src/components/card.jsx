@@ -6,14 +6,14 @@ const cardData = [
     id: 1,
     label: "finance",
     title: "banking and business partnership",
-    image: "/flip-1.jpg",
+    image: "/flip-img-1.webp",
     backType: "button",
   },
   {
     id: 2,
     label: "analytics",
     title: "big data integration for startups",
-    image: "/flip-2.jpg",
+    image: "/flip-img-2.webp",
     backType: "text",
     backText:
       "As a partner of corporates, Liquid has more than 9,000 partners of all sizes and all potential of session.",
@@ -22,7 +22,7 @@ const cardData = [
     id: 3,
     label: "consulting",
     title: "analyzing company reports",
-    image: "/flip-3.jpg",
+    image: "/flip-img-3.webp",
     backType: "button",
   },
 ];
@@ -34,10 +34,11 @@ export default function FlipCardsSection() {
   return (
     <div className="bg-white py-20">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#0F3E3D] mb-2">global experts</h2>
+        <h2 className="text-4xl font-bold text-[#0F3E3D] mb-2">Global Experts
+        </h2>
         <p className="text-gray-500 max-w-xl mx-auto">
-          Hub IT allows your business and technology computers to store,
-          transmit, analyze, and manipulate big data.
+        We're trusted pipe partners for our happy customers. 
+
         </p>
       </div>
 

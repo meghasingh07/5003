@@ -40,19 +40,20 @@ export default function Rotating() {
      
       <div
         className="bg-fixed bg-center bg-cover h-[450px] flex items-center justify-center relative"
-        style={{ backgroundImage: "url('/fixed-bg.jpg')" }}
+        style={{ backgroundImage: "url('/fixed-bg.webp')" }}
       >
         <div className="absolute inset-0 bg-[#083c3c]/90 z-0" />
         <h1 className="relative z-10 text-white text-3xl md:text-5xl font-bold text-center px-6 leading-snug">
-          unleashing our clients' potential by <br />
-          maximising <span className="text-yellow-400">the innovation.</span>
+        Each Inch Of Pipe  
+        <br />
+        Creates Flow That Builds<span className="text-yellow-400"> Nations.</span>
         </h1>
       </div>
 
      
       <div className="bg-gradient-to-r from-white to-gray-100 py-12 px-4 text-center shadow-inner">
         <p className="text-gray-600 text-lg mb-8">
-          Join the 10,000+ companies trusting LandingHub
+        Join our customers in trusting Vihan.
         </p>
 
         <div

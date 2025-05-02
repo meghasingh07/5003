@@ -29,7 +29,7 @@ export default function HeroSection({ onGetQuoteClick }) {
   return (
     <div
       className="relative h-screen bg-cover bg-center bg-fixed text-white font-sans"
-      style={{ backgroundImage: `url('/banner.jpg')` }}
+      style={{ backgroundImage: `url('/hero_banner.webp')` }}
     >
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
@@ -81,7 +81,7 @@ export default function HeroSection({ onGetQuoteClick }) {
           <div className="text-left text-sm">
             <p className="uppercase font-semibold">call us now</p>
             <p className="text-yellow-400 text-xl font-extrabold">
-              +1 114 7788
+            +91-9099032638
             </p>
           </div>
         </div>

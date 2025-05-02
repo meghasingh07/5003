@@ -41,7 +41,7 @@ const About = ({ formRef }) => {
     >
       <div className="grid md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center">
-          <h3 className="text-sm font-bold text-gray-800 ">about us</h3>
+          <h3 className="text-sm font-bold text-gray-800 ">About us </h3>
           <h2 className="text-4xl font-bold text-gray-900 mt-2">
             Plastic Pipes Are <br />
             Built For Durability.
@@ -58,10 +58,10 @@ const About = ({ formRef }) => {
         <div ref={formRef} className="relative">
           <div className="md:absolute md:-top-40 md:right-0 w-full md:w-[400px] bg-white shadow-xl rounded-xl p-6 md:p-8 z-10">
             <h4 className="text-md font-semibold text-gray-800 mb-1">
-              send a message
+              Send a message
             </h4>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              request a call back
+              Request a call back
             </h3>
 
             <Formik
@@ -140,7 +140,7 @@ const About = ({ formRef }) => {
                     type="submit"
                     className="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded"
                   >
-                    get a quote
+                    Get a quote
                   </button>
 
                   {submittedName && (

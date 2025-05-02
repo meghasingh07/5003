@@ -27,7 +27,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
     <>
       <div className="flex justify-between items-center px-6 md:px-16 py-3 bg-black/30 backdrop-blur">
         <div className="flex items-center gap-2 font-bold text-xl">
-          <img src="/logo.svg" alt="Logo" className="h-6 w-auto" />
+          <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
         </div>
 
         <div className="hidden md:flex items-center gap-10 font-semibold text-center ml-auto">
@@ -74,7 +74,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
           ))}
           <div className="text-left text-sm pl-6 border-l border-white/30">
             <p>call us now</p>
-            <p className="text-yellow-400 text-lg font-bold">+1 714 7788</p>
+            <p className="text-yellow-400 text-lg font-bold">+91-9099032638</p>
           </div>
         </div>
 
