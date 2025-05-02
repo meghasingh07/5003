@@ -46,7 +46,7 @@ export default function HeroSection({ onGetQuoteClick }) {
         />
       </div>
 
-      <div className="relative z-10 h-full left-9 text-[1.5rem] flex flex-col justify-center px-6 md:px-16 max-w-7xl pt-32">
+      <div className="relative z-10 h-full left-9 text-[1.3rem] md:text-[1.5rem] flex flex-col justify-center px-6 md:px-16 max-w-7xl pt-32">
         <h1 className="text-white text-[2.5rem]  sm:text-[3rem] md:text-[8rem] lg:text-[11rem] font-extrabold leading-[1.1] md:leading-[1.05]">
           <span className="relative inline-block mr-2">
             <span className="relative z-10">
@@ -62,7 +62,7 @@ export default function HeroSection({ onGetQuoteClick }) {
             <AnimatedLetters text="And" delayStart={0.4} />
           </span>
           <span className="block">
-            <AnimatedLetters text="Leak &nbsp;Free &nbsp; Pipes" delayStart={0.8} />
+            <AnimatedLetters text="Leak-Free &nbsp; Pipes" delayStart={0.8} />
           </span>
         </h1>
 
