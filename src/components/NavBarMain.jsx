@@ -15,7 +15,6 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
     { label: "News", href: "#news" },
     { label: "Contact", href: "/contact" },
   ];
-  
 
   const handleNavigation = (href) => {
     setIsMobileOpen(false);
@@ -44,7 +43,6 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
                     className="flex items-center gap-1 cursor-pointer hover:text-[#004b93]"
                   >
                     {item.label}
-                    
                   </div>
                   {isPagesOpen && (
                     <div className="absolute left-0 top-full mt-2 w-48 bg-white text-black rounded-md shadow-lg z-[100]">
@@ -101,9 +99,9 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
             >
               <div className="flex justify-between items-center border-b pb-4">
                 <div className="flex items-center gap-2 font-bold text-xl">
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>{" "}
-                  hub
+                  <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
                 </div>
+
                 <motion.button
                   onClick={() => setIsMobileOpen(false)}
                   className="text-2xl font-bold"
