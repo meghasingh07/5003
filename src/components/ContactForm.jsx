@@ -80,7 +80,7 @@ const ContactForm = () => {
                   type="submit"
                   className="w-full bg-[#004b93] text-black font-semibold py-3 rounded-md hover:text-amber-50 transition"
                 >
-                  get a quote
+                  Get a quote
                 </button>
 
                 {submittedName && (
