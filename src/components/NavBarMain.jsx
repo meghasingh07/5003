@@ -11,8 +11,8 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Our Products", href: "/products" },
-    { label: "Enquiry form", hasDropdown: true },
-    { label: "News", href: "#news" },
+    { label: "Enquiry", href: "/enquiry" },
+    { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -36,37 +36,12 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
               key={i}
               className="relative flex items-start gap-1 font-bold hover:text-[#004b93]"
             >
-              {item.hasDropdown ? (
-                <div ref={pagesRef} className="relative z-50">
-                  <div
-                    onClick={() => setIsPagesOpen(!isPagesOpen)}
-                    className="flex items-center gap-1 cursor-pointer hover:text-[#004b93]"
-                  >
-                    {item.label}
-                  </div>
-                  {isPagesOpen && (
-                    <div className="absolute left-0 top-full mt-2 w-48 bg-white text-black rounded-md shadow-lg z-[100]">
-                      <ul className="divide-y divide-gray-200">
-                        <li className="p-3 hover:bg-gray-100 cursor-pointer">
-                          What We Do
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <>
-                  <a
-                    href={item.href}
-                    className="cursor-pointer hover:text-[#004b93]"
-                  >
-                    {item.label}
-                  </a>
-                  <span className="text-xs text-white translate-y-[-6px] hidden md:inline-block">
-                    {item.num}
-                  </span>
-                </>
-              )}
+              <a
+                href={item.href}
+                className="cursor-pointer hover:text-[#004b93]"
+              >
+                {item.label}
+              </a>
             </div>
           ))}
           <div className="text-left text-sm pl-6 border-l border-white/30">

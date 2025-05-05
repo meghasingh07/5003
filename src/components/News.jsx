@@ -4,21 +4,21 @@ import { FaArrowRight } from "react-icons/fa";
 
 const newsData = [
   {
-    title: "Investment trend monitor: Top trends in 2021",
+    title: "Investment in Automation: 2024 Trends",
     description:
-      "I think that you should be able to select more than one reason for rating. This team is",
+      "Discover how industrial automation is transforming manufacturing efficiency in the latest market shift.",
     image: "/blog-1.webp",
   },
   {
-    title: "Mind power the ultimate success formula",
+    title: "Leadership & Innovation: Mind Power at Work",
     description:
-      "I think that you should be able to select more than one reason for rating.",
+      "A deep dive into how strategic leadership can drive innovation across your teams and operations.",
     image: "/blog-2.webp",
   },
   {
-    title: "Working from home: Update",
+    title: "Product Update: New Range of PVC Bends",
     description:
-      "I think that you should be able to select more than one reason for rating. This team is",
+      "Learn about the updated design and durability enhancements in our latest plastic pipe range.",
     image: "/blog-3.webp",
   },
 ];

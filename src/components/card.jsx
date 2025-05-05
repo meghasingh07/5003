@@ -5,7 +5,7 @@ const cardData = [
     id: 1,
     name: "Rohit Sharma",
     role: "Director",
-    linkedin: "https://linkedin.com/in/rohit-sharma",
+    linkedin: "https://www.linkedin.com",
     image: "/flip-img-2.webp",
     backText:
       "Rohit leads our financial strategy with a sharp eye for detail and over 15 years of experience in corporate finance.",
@@ -14,7 +14,7 @@ const cardData = [
     id: 2,
     name: "Rohan Mehta",
     role: "Director",
-    linkedin: "https://linkedin.com/in/priyamehta",
+    linkedin: "https://www.linkedin.com",
     image: "/flip-img-1.webp",
     backText:
       "Rohan specializes in big data integration and helps transform insights into real business decisions.",
@@ -23,7 +23,7 @@ const cardData = [
     id: 3,
     name: "Ankit Verma",
     role: " Director",
-    linkedin: "https://linkedin.com/in/ankitverma",
+    linkedin: "https://www.linkedin.com",
     image: "/flip-img-3.webp",
     backText:
       "Ankit brings a wealth of knowledge in business consulting, helping clients scale and optimize their operations.",
@@ -58,7 +58,7 @@ export default function FlipCardsSection() {
                 transform: hovered === index ? "rotateY(180deg)" : "rotateY(0deg)",
               }}
             >
-              {/* FRONT SIDE */}
+              
               <div
                 className="absolute w-full h-full rounded-xl overflow-hidden"
                 style={{
@@ -74,7 +74,7 @@ export default function FlipCardsSection() {
                 </div>
               </div>
 
-              {/* BACK SIDE */}
+              
               <div
                 className="absolute w-full h-full bg-[#004b93] text-white rounded-xl p-6 flex flex-col items-center justify-center space-y-4"
                 style={{
