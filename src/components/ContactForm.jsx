@@ -22,10 +22,10 @@ const ContactForm = () => {
 
   return (
     <section className="bg-white py-16 px-4">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-12 items-center">
         <div className="bg-white shadow-xl rounded-xl p-8 md:p-10 border">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Send a message
+            Connect with us
           </h2>
           <Formik
             initialValues={{
@@ -85,7 +85,8 @@ const ContactForm = () => {
 
                 {submittedName && (
                   <p className="text-green-600 font-medium mt-4">
-                    Thanks {submittedName}, for your response we will get in touch.
+                    Thanks {submittedName}, for your response we will get in
+                    touch.
                   </p>
                 )}
               </Form>
