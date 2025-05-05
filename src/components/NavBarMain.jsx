@@ -9,8 +9,8 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "#about" },
-    { label: "Our Products", href: "#services" },
+    { label: "About Us", href: "/about" },
+    { label: "Our Products", href: "/products" },
     { label: "Enquiry form", hasDropdown: true },
     { label: "News", href: "#news" },
     { label: "Contact", href: "/contact" },
@@ -25,7 +25,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
 
   return (
     <>
-      <div className="flex justify-between items-center px-6 md:px-16 py-3 backdrop-blur">
+      <div className="flex justify-between items-center px-6 md:px-16 py-3 ">
         <div className="flex items-center gap-2 font-bold text-xl">
           <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
         </div>

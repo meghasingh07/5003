@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const formFields = [
   {
@@ -26,7 +27,6 @@ const formFields = [
     name: "phone",
     type: "tel",
     placeholder: "Phone Number",
-    
   },
   {
     name: "message",
@@ -48,35 +48,46 @@ const About = ({ formRef }) => {
   const [submittedName, setSubmittedName] = useState("");
 
   return (
-    <div id="about" className="relative max-w-7xl mx-auto px-4 md:px-8 mt-10 pb-20">
+    <div
+      id="about"
+      className="relative max-w-7xl mx-auto px-4 md:px-8 mt-10 pb-20"
+    >
       <div className="grid md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center">
           <h3 className="text-sm font-bold text-gray-800">About us</h3>
           <h2 className="text-4xl font-bold text-gray-900 mt-2">
-          Machinery Designed 
-          <br />
-          To Exceed Expectations.
+            Machinery Designed
+            <br />
+            To Exceed Expectations.
           </h2>
           <p className="mt-4 text-gray-600">
-          Since 1994, Vihan has been a trusted machinery partner for many pipe-making plants. Vihan offers a range of machinery products, such as PVC pipe bending, pipe packaging, cutter series, and more. Vihan provides you smart pipe production that is reliable in every rotation. 
-
+            Since 1994, Vihan has been a trusted machinery partner for many
+            pipe-making plants. Vihan offers a range of machinery products, such
+            as PVC pipe bending, pipe packaging, cutter series, and more. Vihan
+            provides you smart pipe production that is reliable in every
+            rotation.
           </p>
-          <div className="mt-6 flex justify-start">
+
+          <Link to="/send-message" className="mt-6 flex justify-start">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="px-6 py-2 bg-[#004b93]   text-white hover:text-black text-sm font-semibold rounded shadow-md"
+              className="px-6 py-2 bg-[#004b93] text-white hover:text-black text-sm font-semibold rounded shadow-md"
             >
               Know More
             </motion.button>
-          </div>
+          </Link>
         </div>
 
         <div ref={formRef} className="relative">
           <div className="md:absolute md:-top-40 md:right-0 w-full md:w-[400px] bg-white shadow-xl rounded-xl p-6 md:p-8 z-10">
-            <h4 className="text-md font-semibold text-gray-800 mb-1">Send a message</h4>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Connect with us</h3>
+            <h4 className="text-md font-semibold text-gray-800 mb-1">
+              Send a message
+            </h4>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Connect with us
+            </h3>
 
             <Formik
               initialValues={{
@@ -139,7 +150,9 @@ const About = ({ formRef }) => {
                           placeholder={field.placeholder}
                           rows="4"
                           className={`w-full border p-3 rounded bg-gray-100 ${
-                            errors[field.name] && touched[field.name] ? "border-red-500" : ""
+                            errors[field.name] && touched[field.name]
+                              ? "border-red-500"
+                              : ""
                           }`}
                         />
                       ) : (

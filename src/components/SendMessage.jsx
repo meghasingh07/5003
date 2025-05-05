@@ -7,10 +7,10 @@ const contactDetails = [
   {
     icon: "📍",
     label: "Address",
-    value: "290 Maryam Springs 260, Courbevoie, Paris",
+    value: "Block No. 22B, Near Claris Pharmaceuticals, Sarkhej - Bavla Highway,Ahmedabad: 382213, Gujarat,  India",
   },
-  { icon: "📧", label: "Email", value: "hello@liquid-themes.com" },
-  { icon: "📱", label: "Phone", value: "+47 213 5941 295" },
+  { icon: "📧", label: "Email", value: "sales@vihanindia.com" },
+  { icon: "📱", label: "Phone", value: "+91-9099032638" },
 ];
 
 const formFields = [
@@ -93,7 +93,7 @@ export default function SendMessagePage() {
 
               <button
                 type="submit"
-                className="mt-4 w-full bg-yellow-500 text-white font-semibold py-3 rounded-md hover:bg-yellow-600 transition-all"
+                className="mt-4 w-full bg-[#004b93] text-black hover:text-white font-semibold py-3 rounded-md  transition-all"
               >
                 Send Message
               </button>

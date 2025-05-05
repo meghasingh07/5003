@@ -23,7 +23,7 @@ export default function NavBarTop() {
   }, []);
 
   return (
-    <div className="relative z-30 hidden md:flex justify-between items-center px-6 md:px-16 py-3 border-b border-white/20  backdrop-blur text-sm">
+    <div className="relative z-30 hidden md:flex justify-between items-center px-6 md:px-16 py-3 border-b border-white/20   text-sm">
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-2">
           <img src="/mail.svg" alt="mail" className="w-4 h-4 invert" />

@@ -38,7 +38,7 @@ export default function FlipCardsSection() {
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-black mb-2">Our Team Experts</h2>
         <p className="text-gray-500 max-w-xl mx-auto">
-          We’re trusted machinery partners for world-class pipes.
+          We're trusted machinery partners for world-class pipes.
         </p>
       </div>
 

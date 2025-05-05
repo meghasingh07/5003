@@ -17,7 +17,6 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 px-6 md:px-20">
       <div className="grid md:grid-cols-3 gap-10">
-        {/* Company Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +26,8 @@ const Footer = () => {
             <img src="/logoo.webp" alt="Vihan Logo" className="h-8" />
           </div>
           <p className="text-gray-300">
-            Vihan offers innovative, durable plastic piping solutions for homes and infrastructure across India since 1994.
+            Vihan offers innovative, durable plastic piping solutions for homes
+            and infrastructure across India since 1994.
           </p>
           <div className="flex space-x-4 mt-6 text-xl">
             {socialIcons.map((icon, i) => (
@@ -41,7 +41,6 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Address & Office Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,28 +48,37 @@ const Footer = () => {
         >
           <h3 className="font-semibold text-lg mb-4">Our Address</h3>
           <p className="text-gray-300 mb-2">
-            <strong>Registered Office and Works:</strong><br />
-            Block No. 22B, Near Claris Pharmaceuticals, Sarkhej - Bavla Highway,<br />
+            <strong>Registered Office and Works:</strong>
+            <br />
+            Block No. 22B, Near Claris Pharmaceuticals, Sarkhej - Bavla Highway,
+            <br />
             Ahmedabad: 382213, Gujarat, India
           </p>
           <p className="text-gray-300 mb-2">
-            <strong>Corporate Office:</strong><br />
-            613 & 614, B Block, Navratna Corporate Park,<br />
+            <strong>Corporate Office:</strong>
+            <br />
+            613 & 614, B Block, Navratna Corporate Park,
+            <br />
             Bopal - Ambli Road, Ahmedabad: 380058, Gujarat, India
           </p>
           <div className="mt-4">
             <p className="text-white font-semibold">Email:</p>
-            <a href="mailto:sales@vihanindia.com" className="text-gray-300 hover:underline">
+            <a
+              href="mailto:sales@vihanindia.com"
+              className="text-gray-300 hover:underline"
+            >
               sales@vihanindia.com
             </a>
             <br />
-            <a href="mailto:service@vihanindia.com" className="text-gray-300 hover:underline">
+            <a
+              href="mailto:service@vihanindia.com"
+              className="text-gray-300 hover:underline"
+            >
               service@vihanindia.com
             </a>
           </div>
         </motion.div>
 
-        {/* Opening Hours */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,13 +87,17 @@ const Footer = () => {
           <h3 className="font-semibold text-lg mb-4">Opening Hours</h3>
           <div className="text-gray-300 space-y-4">
             <div>
-              <p><strong>Manufacturing Plant:</strong></p>
+              <p>
+                <strong>Manufacturing Plant:</strong>
+              </p>
               <p>8:30 AM - 05:40 PM IST</p>
               <p>Monday - Saturday</p>
               <p>1/3 Saturday C-OFF; Sunday WOFF</p>
             </div>
             <div>
-              <p><strong>Office Hours:</strong></p>
+              <p>
+                <strong>Office Hours:</strong>
+              </p>
               <p>8:30 AM - 05:40 PM IST</p>
               <p>Monday - Saturday</p>
               <p>1/3 Saturday C-OFF; Sunday WOFF</p>
@@ -100,15 +112,21 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
         <p>
-          ©{new Date().getFullYear()} <span className="text-white">Vihan India</span>. All rights reserved.
+          ©{new Date().getFullYear()}{" "}
+          <span className="text-white">Vihan India</span>. All rights reserved.
         </p>
         <div className="flex gap-6 mt-4 md:mt-0">
-          <a href="#" className="hover:text-[#004b93] transition">Privacy</a>
-          <a href="#" className="hover:text-[#004b93] transition">Terms</a>
-          <a href="#" className="hover:text-[#004b93] transition">Sitemap</a>
+          <a href="#" className="hover:text-[#004b93] transition">
+            Privacy
+          </a>
+          <a href="#" className="hover:text-[#004b93] transition">
+            Terms
+          </a>
+          <a href="#" className="hover:text-[#004b93] transition">
+            Sitemap
+          </a>
         </div>
       </div>
     </footer>

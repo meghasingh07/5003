@@ -1,38 +1,50 @@
 import React from "react";
 import "./case.css";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const cardData = [
   {
     title: "PVC Pipe Bending",
     image: "/PVC Pipe Bending1.webp",
+    slug: "pvc-pipe-bending",
   },
   {
     title: "Haul Off",
     image: "/HAUL OFF1.webp",
+    slug: "haul-off",
   },
   {
     title: "Pipe Packaging",
     image: "/Pipe Packaging0.webp",
+    slug: "pipe-packaging",
   },
   {
     title: "Special Purpose PVC Solution",
     image: "/Special Purpose PVC Solution0.webp",
+    slug: "special-purpose-pvc-solution",
   },
   {
     title: "Belling or Scoketing",
     image: "/logoo.webp",
+    slug: "belling-or-socketing",
   },
   {
     title: "Cutter Series",
     image: "/CUTTER SERIES1.webp",
+    slug: "cutter-series",
   },
   {
     title: "Pipe Repair Coupler",
     image: "/Pipe Repair Coupler1.webp",
+    slug: "pipe-repair-coupler",
   },
 ];
 
+
+
 export default function CaseStudies() {
+  const navigate = useNavigate();
   const topCards = cardData.slice(0, 4);
   const bottomCards = cardData.slice(4);
 
@@ -59,6 +71,7 @@ export default function CaseStudies() {
       <button
         type="button"
         className="mt-12 text-white bg-[#004b93] font-semibold cursor-pointer hover:text-black transition duration-200 text-lg px-6 py-3 rounded"
+        onClick={() => navigate("/products")}
       >
         See more products
       </button>
@@ -70,39 +83,36 @@ function Card({ card, index }) {
   const isEven = index % 2 === 1;
 
   return (
-    <div
-      className={`
-        group transition-all duration-300 rounded-xl p-6 h-60 flex flex-col items-center justify-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transform
-        ${
-          isEven ? "bg-[#004b93] hover:bg-white" : "bg-white hover:bg-[#004b93]"
-        }
-      `}
-    >
-      <img
-        src={card.image}
-        alt={card.title}
-        className="w-auto h-30 object-contain mb-4 transition-transform duration-300 transform group-hover:scale-110"
-      />
-      <h3
+    <Link to={`/products/${card.slug}`}>
+      <div
         className={`
-          text-base md:text-lg font-semibold transition-colors duration-300 px-2
-          ${
-            isEven
-              ? "text-white group-hover:text-[#083c3c]"
-              : "text-[#083c3c] group-hover:text-white"
-          }
+          group transition-all duration-300 rounded-xl p-6 h-60 flex flex-col items-center justify-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transform
+          ${isEven ? "bg-[#004b93] hover:bg-white" : "bg-white hover:bg-[#004b93]"}
         `}
       >
-        {card.title}
-      </h3>
-      <p
-        className={`
-          mt-2 transition duration-300 text-sm font-medium opacity-0 group-hover:opacity-100
-          ${isEven ? "text-[#004b93]" : "text-white"}
-        `}
-      >
-        Explore →
-      </p>
-    </div>
+        <img
+          src={card.image}
+          alt={card.title}
+          className="w-auto h-30 object-contain mb-4 transition-transform duration-300 transform group-hover:scale-110"
+        />
+        <h3
+          className={`
+            text-base md:text-lg font-semibold transition-colors duration-300 px-2
+            ${isEven ? "text-white group-hover:text-[#083c3c]" : "text-[#083c3c] group-hover:text-white"}
+          `}
+        >
+          {card.title}
+        </h3>
+        <p
+          className={`
+            mt-2 transition duration-300 text-sm font-medium opacity-0 group-hover:opacity-100
+            ${isEven ? "text-[#004b93]" : "text-white"}
+          `}
+        >
+          Explore →
+        </p>
+      </div>
+    </Link>
   );
 }
+
