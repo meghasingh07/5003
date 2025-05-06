@@ -50,10 +50,11 @@ export default function HeroSection({ onGetQuoteClick }) {
               <AnimatedLetters text="Pipe-Making" delayStart={0} />
             </span>
             <img
-              src="/underline.png"
-              alt=""
-              className="absolute bottom-0 left-0 w-full h-2 sm:h-3 md:h-5 z-0"
-            />
+  src="/underline.png"
+  alt=""
+  className="absolute bottom-0 md:bottom-[-4px] left-0 w-full h-2 sm:h-3 md:h-5 z-0"
+/>
+
           </span>
           <span className="inline-block">
             <AnimatedLetters text="With" delayStart={0.4} />
