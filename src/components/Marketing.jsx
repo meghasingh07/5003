@@ -28,18 +28,17 @@ export default function MarketingTeamPage() {
         {/* Left Section */}
         <div className="flex flex-col justify-center space-y-5">
           <h1 className="text-3xl md:text-5xl font-bold text-black leading-tight">
-          Crafting The Future Of Pipe 
-          Manufacturing Machines.
+            Crafting The Future Of Pipe Manufacturing Machines.
           </h1>
           <p className="text-gray-500 max-w-md text-sm md:text-base">
-          We help our customers in building smart infrastructure through our reliable and smart machines. 
-
+            We help our customers in building smart infrastructure through our
+            reliable and smart machines.
           </p>
 
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#004b93] text-white hover:text-white font-semibold px-6 py-3 w-fit rounded shadow hover:shadow-lg transition-all duration-300 text-sm md:text-base mx-auto md:mx-0"
+            className="bg-[#004b93] text-white border-2 border-[#004b93] font-semibold px-6 py-3 w-fit rounded shadow transition-all duration-300 hover:bg-white hover:text-black"
           >
             Learn more
           </motion.button>

@@ -25,31 +25,34 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
 
   return (
     <>
-      <div className="flex justify-between items-center px-6 md:px-16 py-3 ">
-        <div className="flex items-center gap-2 font-bold text-xl">
+      <div className="flex justify-between items-center px-6 md:px-16 py-3">
+        {/* Logo with animation and link */}
+        <a
+          href="/"
+          className="flex items-center gap-2 font-bold text-xl transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
+        >
           <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
-        </div>
+        </a>
 
-        <div className="hidden md:flex items-center gap-10 font-semibold text-center ml-auto">
+        {/* Desktop menu */}
+        <div className="hidden md:flex items-center gap-10 font-semibold text-center ml-auto group">
           {menuItems.map((item, i) => (
             <div
               key={i}
-              className="relative flex items-start gap-1 font-bold hover:text-[#004b93]"
+              className="relative flex items-start gap-1 font-bold transition duration-300 cursor-pointer hover:text-[#004b93] group-hover:opacity-60 hover:opacity-100"
             >
-              <a
-                href={item.href}
-                className="cursor-pointer hover:text-[#004b93]"
-              >
-                {item.label}
-              </a>
+              <a href={item.href}>{item.label}</a>
             </div>
           ))}
+
+          {/* Call info */}
           <div className="text-left text-sm pl-6 border-l border-white/30">
             <p>call us now</p>
             <p className="text-white text-lg font-bold">+91-9099032638</p>
           </div>
         </div>
 
+        {/* Mobile menu icon */}
         <div className="md:hidden">
           <Menu
             className="w-6 h-6 cursor-pointer"
@@ -58,12 +61,13 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
         </div>
       </div>
 
+      {/* Mobile menu with animation */}
       <AnimatePresence>
         {isMobileOpen && (
           <Dialog
             open={isMobileOpen}
             onClose={() => setIsMobileOpen(false)}
-            className="fixed inset-0  z-50"
+            className="fixed inset-0 z-50"
           >
             <motion.div
               initial={{ x: "100%" }}
@@ -73,9 +77,17 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
               className="absolute right-0 top-0 w-4/5 sm:w-1/2 h-full bg-white text-black p-6 shadow-2xl"
             >
               <div className="flex justify-between items-center border-b pb-4">
-                <div className="flex items-center gap-2 font-bold text-xl">
-                  <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
-                </div>
+                <motion.img
+                  src="/logoo.webp"
+                  alt="Logo"
+                  className="h-10 w-auto"
+                  whileHover={{
+                    rotate: 8, 
+                    scale: 1.08, 
+                    filter: "drop-shadow(0 0 16px #004b93)", 
+                  }}
+                  transition={{ type: "spring", stiffness: 180, damping: 12 }}
+                />
 
                 <motion.button
                   onClick={() => setIsMobileOpen(false)}

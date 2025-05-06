@@ -55,10 +55,10 @@ export default function FlipCardsSection() {
               className="relative w-full h-[400px] transition-transform duration-700"
               style={{
                 transformStyle: "preserve-3d",
-                transform: hovered === index ? "rotateY(180deg)" : "rotateY(0deg)",
+                transform:
+                  hovered === index ? "rotateY(180deg)" : "rotateY(0deg)",
               }}
             >
-              
               <div
                 className="absolute w-full h-full rounded-xl overflow-hidden"
                 style={{
@@ -69,12 +69,13 @@ export default function FlipCardsSection() {
                 }}
               >
                 <div className="flex flex-col justify-end h-full p-6 space-y-2 bg-black/40">
-                  <div className="text-white text-xl font-bold">{card.name}</div>
+                  <div className="text-white text-xl font-bold">
+                    {card.name}
+                  </div>
                   <div className="text-white text-sm">{card.role}</div>
                 </div>
               </div>
 
-              
               <div
                 className="absolute w-full h-full bg-[#004b93] text-white rounded-xl p-6 flex flex-col items-center justify-center space-y-4"
                 style={{
@@ -87,7 +88,7 @@ export default function FlipCardsSection() {
                   href={card.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white underline text-sm hover:text-yellow-300"
+                  className="bg-white text-black border border-[#004b93] px-4 py-2 rounded hover:bg-[#004b93] hover:text-white transition"
                 >
                   View LinkedIn
                 </a>

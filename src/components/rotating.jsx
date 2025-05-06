@@ -42,12 +42,12 @@ export default function Rotating() {
         className="bg-fixed bg-center bg-cover h-[450px] flex items-center justify-center relative"
         style={{ backgroundImage: "url('/fixed-bg.webp')" }}
       >
-        <div className="absolute inset-0 bg-[#083c3c]/90 z-0" />
+        <div className="absolute inset-0 bg-black/40 z-0" />
         <h1 className="relative z-10 text-white text-3xl md:text-5xl font-bold text-center px-6 leading-snug">
         Technology-Driven Machines  
  
         <br />
-        Create Pipes That Build<span className="text-black">&nbsp;Nations</span>
+        Create Pipes That Build Nations
         </h1>
       </div>
 

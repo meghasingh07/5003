@@ -71,7 +71,7 @@ export default function HeroSection({ onGetQuoteClick }) {
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <button
             onClick={onGetQuoteClick}
-            className="bg-[#004b93]  text-white hover:text-black px-8 py-4 font-bold rounded-md text-lg"
+            className="bg-[#004b93] text-white border-2 border-[#004b93] px-6 py-3 font-bold rounded-md text-base transition-all duration-300 hover:bg-white hover:text-black"
           >
             Get a quote
           </button>

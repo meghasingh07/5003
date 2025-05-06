@@ -41,8 +41,6 @@ const cardData = [
   },
 ];
 
-
-
 export default function CaseStudies() {
   const navigate = useNavigate();
   const topCards = cardData.slice(0, 4);
@@ -56,63 +54,53 @@ export default function CaseStudies() {
         machinery to shape pipeline requirements.
       </p>
 
+      {/* Top Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         {topCards.map((card, index) => (
-          <Card key={index} card={card} index={index} />
+          <Card key={index} card={card} />
         ))}
       </div>
 
+     
       <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {bottomCards.map((card, index) => (
-          <Card key={index + 4} card={card} index={index + 4} />
+          <Card key={index + 4} card={card} />
         ))}
       </div>
 
+   
       <button
-        type="button"
-        className="mt-12 text-white bg-[#004b93] font-semibold cursor-pointer hover:text-black transition duration-200 text-lg px-6 py-3 rounded"
-        onClick={() => navigate("/products")}
-      >
-        See more products
-      </button>
+  type="button"
+  className="mt-12 bg-[#004b93] text-white border-2 border-[#004b93] font-semibold text-lg px-6 py-3 rounded transition-all duration-300 hover:bg-white hover:text-black"
+  onClick={() => navigate("/products")}
+>
+  See more products
+</button>
+
+
     </div>
   );
 }
 
-function Card({ card, index }) {
-  const isEven = index % 2 === 1;
-
+function Card({ card }) {
   return (
     <Link to={`/products/${card.slug}`}>
       <div
-        className={`
-          group transition-all duration-300 rounded-xl p-6 h-60 flex flex-col items-center justify-center text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transform
-          ${isEven ? "bg-[#004b93] hover:bg-white" : "bg-white hover:bg-[#004b93]"}
-        `}
+        className="group transition-all duration-500 border-2 border-[#004b93] rounded-xl p-6 h-60 flex flex-col items-center justify-center text-center cursor-pointer 
+        bg-white hover:bg-[#004b93] transform hover:-translate-y-1 shadow-md hover:shadow-xl"
       >
         <img
           src={card.image}
           alt={card.title}
-          className="w-auto h-30 object-contain mb-4 transition-transform duration-300 transform group-hover:scale-110"
+          className="w-auto h-24 object-contain mb-4 transition-transform duration-300 transform group-hover:scale-110"
         />
-        <h3
-          className={`
-            text-base md:text-lg font-semibold transition-colors duration-300 px-2
-            ${isEven ? "text-white group-hover:text-[#083c3c]" : "text-[#083c3c] group-hover:text-white"}
-          `}
-        >
+        <h3 className="text-base md:text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
           {card.title}
         </h3>
-        <p
-          className={`
-            mt-2 transition duration-300 text-sm font-medium opacity-0 group-hover:opacity-100
-            ${isEven ? "text-[#004b93]" : "text-white"}
-          `}
-        >
+        <p className="mt-2 text-sm font-medium text-black group-hover:text-white transition-colors duration-300">
           Explore →
         </p>
       </div>
     </Link>
   );
 }
-

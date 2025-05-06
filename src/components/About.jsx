@@ -9,19 +9,16 @@ const formFields = [
     name: "firstName",
     type: "text",
     placeholder: "First Name",
-    icon: "/user.jpeg",
   },
   {
     name: "lastName",
     type: "text",
     placeholder: "Last Name",
-    icon: "/user.jpeg",
   },
   {
     name: "email",
     type: "email",
     placeholder: "Email Address",
-    icon: "/mail.svg",
   },
   {
     name: "phone",
@@ -67,13 +64,16 @@ const About = ({ formRef }) => {
             provides you smart pipe production that is reliable in every
             rotation.
           </p>
+          <p className="mt-2 text-gray-600">
+  Our offerings include PVC pipe bending machines, pipe packaging systems, cutter series, and much more — empowering smart pipe production that’s reliable in every rotation.
+</p>
 
           <Link to="/send-message" className="mt-6 flex justify-start">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="px-6 py-2 bg-[#004b93] text-white hover:text-black text-sm font-semibold rounded shadow-md"
+              className="px-6 py-3 bg-[#004b93] text-white border-2 border-[#004b93] text-sm font-semibold rounded-md transition-all duration-300 hover:bg-white hover:text-black"
             >
               Know More
             </motion.button>
@@ -184,12 +184,6 @@ const About = ({ formRef }) => {
                     </div>
                   ))}
 
-                  <div className="flex items-center gap-2">
-                    <Field type="checkbox" name="terms" />
-                    <label className="text-sm text-gray-600">
-                      I agree to the terms of service.
-                    </label>
-                  </div>
                   <ErrorMessage
                     name="terms"
                     component="div"
@@ -198,7 +192,7 @@ const About = ({ formRef }) => {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#004b93] text-white font-bold py-3 rounded"
+                    className="w-full bg-[#004b93] text-white border-2 border-[#004b93] font-semibold py-3 rounded-md transition-all duration-300 hover:bg-white hover:text-black"
                   >
                     Get a quote
                   </button>
