@@ -31,7 +31,7 @@ export default function NavBarTop() {
         </div>
         <div className="border-l border-white/40 h-5"></div>
         <div className="flex items-center gap-2">
-          <img src="/street.svg" alt="location" className="w-4 h-4 invert" />
+          <img src="/locationn.png" alt="location" className="w-4 h-4 " />
           Ahmedabad: 380058, Gujarat, India
         </div>
       </div>

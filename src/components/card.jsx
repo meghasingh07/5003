@@ -51,8 +51,8 @@ export default function FlipCardsSection() {
             onMouseLeave={() => setHovered(null)}
             style={{ perspective: 1000 }}
           >
-            <div
-              className="relative w-full h-[400px] transition-transform duration-700"
+           <div
+  className="relative w-full h-[400px] transition-transform duration-700 shadow-2xl shadow-black/70"
               style={{
                 transformStyle: "preserve-3d",
                 transform:

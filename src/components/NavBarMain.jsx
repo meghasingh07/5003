@@ -81,10 +81,12 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
                   src="/logoo.webp"
                   alt="Logo"
                   className="h-10 w-auto"
+                  style={{
+                    filter: "drop-shadow(0 6px 12px rgba(0, 0, 0, 0.8))",
+                  }}
                   whileHover={{
-                    rotate: 8, 
-                    scale: 1.08, 
-                    filter: "drop-shadow(0 0 16px #004b93)", 
+                    rotate: 8,
+                    scale: 1.08,
                   }}
                   transition={{ type: "spring", stiffness: 180, damping: 12 }}
                 />
