@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const productDetails = {
   "haul-off": {
@@ -277,6 +278,7 @@ const productDetails = {
   },
 };
 
+
 export default function ProductDetail() {
   const { slug } = useParams();
   const product = productDetails[slug];
@@ -288,20 +290,27 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="bg-white min-h-screen px-4 py-10 md:px-16">
+    <div className="bg-gradient-to-br from-white via-gray-50 to-white min-h-screen px-4 py-10 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
         {/* Left Text Section */}
-        <div className="bg-[#004b93] text-white p-8 rounded-xl">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#004b93] text-white p-8 rounded-xl shadow-md border-l-4 border-yellow-400"
+        >
           <h1 className="text-3xl md:text-4xl font-bold mb-2">
             {product.title}
           </h1>
-          <h2 className="text-xl font-semibold mb-4">{product.series}</h2>
-          <ul className="list-disc list-inside text-white mb-6 space-y-2">
+          <h2 className="text-xl font-semibold mb-4 text-blue-300 tracking-wide">
+            {product.series}
+          </h2>
+          <ul className="list-disc pl-5 space-y-2 text-white/90">
             {product.features.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
           </ul>
-          <div className="flex gap-6">
+          <div className="flex gap-6 mt-6">
             <a
               href={product.downloadLink}
               className="border-b border-white hover:text-gray-300"
@@ -315,24 +324,35 @@ export default function ProductDetail() {
               Contact Us
             </a>
           </div>
-        </div>
+        </motion.div>
 
-       
-        <div className="flex justify-center items-center">
-          <img
-            src={product.image}
-            alt={product.title}
-            className="max-h-[400px] w-full object-contain"
-          />
-        </div>
+        {/* Right Image Section */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center items-center"
+        >
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="h-[250px] w-full object-contain bg-gray-100"
+            />
+          </div>
+        </motion.div>
       </div>
 
-     
+      {/* Table Section */}
       {product.table && product.table.length > 0 && (
-        <div className="max-w-6xl mx-auto mt-16 overflow-x-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-6xl mx-auto mt-16 overflow-x-auto"
+        >
           {Array.isArray(product.table[0]) ? (
-           
-            <table className="min-w-full text-sm text-left border">
+            <table className="min-w-full text-sm text-left border rounded-md overflow-hidden shadow-md">
               <thead className="bg-gray-200 text-gray-700">
                 <tr>
                   <th className="p-2 border">Model</th>
@@ -358,7 +378,7 @@ export default function ProductDetail() {
               </tbody>
             </table>
           ) : (
-            <table className="min-w-full text-sm text-left border">
+            <table className="min-w-full text-sm text-left border rounded-md overflow-hidden shadow-md">
               <thead className="bg-gray-200 text-gray-700">
                 <tr>
                   {Object.keys(product.table[0]).map((key) => (
@@ -381,18 +401,22 @@ export default function ProductDetail() {
               </tbody>
             </table>
           )}
-        </div>
+        </motion.div>
       )}
 
-<div className="mt-12 flex justify-center">
-  <Link
-    to="/products"
-    className="bg-white text-black border border-[#004b93] px-6 py-2 rounded hover:bg-[#004b93] hover:text-white transition"
-  >
-    ← Back to Products
-  </Link>
-
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.3 }}
+        className="mt-12 flex justify-center"
+      >
+        <Link
+          to="/products"
+          className="bg-white text-black border border-[#004b93] px-6 py-2 rounded hover:bg-[#004b93] hover:text-white transition"
+        >
+          ← Back to Products
+        </Link>
+      </motion.div>
     </div>
   );
 }

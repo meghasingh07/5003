@@ -47,7 +47,7 @@ export default function CaseStudies() {
   const bottomCards = cardData.slice(4);
 
   return (
-    <div className="text-center py-2 bg-white px-4 md:px-12 lg:px-20">
+    <div className="text-center py-5 bg-white px-4 md:px-12 lg:px-20">
       <h2 className="text-4xl font-bold text-black mb-4">Our Products</h2>
       <p className="text-gray-600 max-w-xl mx-auto mb-12">
         Get worry-free pipe producing solutions. Choose from our range of

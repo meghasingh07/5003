@@ -3,24 +3,24 @@ import React from "react";
 const teamData = [
   {
     id: 1,
-    image: "/image-box-1.jpeg",
-    label: "Strategy",
+    image: "/planing.jpg",
+    label: " Planning",
     layout: "md:row-span-2 md:col-span-2",
   },
   {
     id: 2,
-    image: "/image-box-3.jpeg",
-    label: "Team",
+    image: "/workflow.webp",
+    label: " Workforce",
   },
   {
     id: 3,
-    image: "/image-box-4.jpeg",
-    label: "Learn",
+    image: "/training.jpg",
+    label: "Training",
   },
   {
     id: 4,
-    image: "/titlebar.jpeg",
-    label: "Innovation",
+    image: "/pipe.jpg",
+    label: "Automation",
     layout: "md:col-span-3",
   },
 ];

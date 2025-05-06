@@ -13,15 +13,18 @@ const Contact = () => {
         <NavBarMain />
       </div>
 
-      <div className="relative w-full h-[500px] bg-black">
+      <div
+  className="relative w-full h-[400px] bg-cover bg-center"
+  style={{ backgroundImage: "url('/contact.jpg')" }}  // Replace with your actual image path
+>
+  <div className="absolute inset-0 bg-black/60"></div>
+  <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+    <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
+      Contact us
+    </h1>
+  </div>
+</div>
 
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-          <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
-            Contact us
-          </h1>
-        </div>
-      </div>
       <ContactForm />
       <Footer />
     </div>

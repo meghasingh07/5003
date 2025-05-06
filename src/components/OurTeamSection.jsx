@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
+
 
 const teamMembers = [
   {
@@ -79,32 +81,34 @@ const OurTeamSection = () => {
       </section>
 
       <section
-        id="stats"
-        className="relative text-white py-16 px-4 overflow-hidden"
-        style={{
-          backgroundImage: "url('/counters.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-        }}
+  id="stats"
+  className="bg-gray-100 py-16 px-4 text-center"
+>
+  <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6">
+    {stats.map((stat, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.2 }}
+        viewport={{ once: true }}
+        className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
       >
-        <div className="absolute inset-0 bg-black/80 z-0" />
-        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-          {stats.map((stat, index) => (
-            <div key={index}>
-              <div className="text-4xl mb-2">{stat.icon}</div>
-              <div className="text-3xl font-bold">
-                <CountUp
-                  key={key}
-                  end={stat.value}
-                  duration={6}
-                  suffix={stat.suffix || ""}
-                />
-              </div>
-              <p className="text-sm mt-1 text-white/80">{stat.label}</p>
-            </div>
-          ))}
+        <div className="text-4xl mb-2">{stat.icon}</div>
+        <div className="text-2xl font-bold text-gray-800">
+          <CountUp
+            key={key}
+            end={stat.value}
+            duration={6}
+            suffix={stat.suffix || ""}
+          />
         </div>
-      </section>
+        <p className="text-sm mt-1 text-gray-600">{stat.label}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
     </div>
   );
 };

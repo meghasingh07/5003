@@ -34,7 +34,7 @@ export default function FlipCardsSection() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="bg-white py-20">
+    <div className="bg-white py-10">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-black mb-2">Our Team Experts</h2>
         <p className="text-gray-500 max-w-xl mx-auto">
