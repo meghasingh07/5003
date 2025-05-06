@@ -185,7 +185,7 @@ const EnquiryForm = () => {
               </div>
             </div>
 
-            <div className="bg-[#186784] text-white font-bold text-center py-2">
+            <div className="bg-[#004b93] text-white font-bold text-center py-2">
               Exhibition Name
             </div>
 
