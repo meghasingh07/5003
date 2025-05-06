@@ -7,7 +7,8 @@ const contactDetails = [
   {
     icon: "📍",
     label: "Address",
-    value: "Block No. 22B, Near Claris Pharmaceuticals, Sarkhej - Bavla Highway,Ahmedabad: 382213, Gujarat,  India",
+    value:
+      "Block No. 22B, Near Claris Pharmaceuticals, Sarkhej - Bavla Highway,Ahmedabad: 382213, Gujarat,  India",
   },
   { icon: "📧", label: "Email", value: "sales@vihanindia.com" },
   { icon: "📱", label: "Phone", value: "+91-9099032638" },
@@ -93,7 +94,7 @@ export default function SendMessagePage() {
 
               <button
                 type="submit"
-                className="mt-4 w-full bg-[#004b93] text-black hover:text-white font-semibold py-3 rounded-md  transition-all"
+                className="mt-4 w-full bg-white text-black border border-[#004b93] shadow-[0_0_10px_#004b93] font-semibold py-3 rounded-md hover:bg-[#004b93] hover:text-white transition-all"
               >
                 Send Message
               </button>
@@ -105,7 +106,7 @@ export default function SendMessagePage() {
       <div className="text-center pb-10">
         <button
           onClick={() => navigate("/")}
-          className="text-blue-600 hover:underline text-sm"
+          className="bg-white text-black border border-[#004b93] shadow-[0_0_10px_#004b93] px-6 py-2 rounded hover:bg-[#004b93] hover:text-white transition text-sm"
         >
           ← Back to Home
         </button>

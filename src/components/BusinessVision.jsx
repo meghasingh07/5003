@@ -59,7 +59,7 @@ const BusinessVision = () => {
   };
 
   return (
-    <div className="bg-gray-50 px-4 md:px-12 py-12">
+    <div className="bg-gray-50 px-4 md:px-12 py-8">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">

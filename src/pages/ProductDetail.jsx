@@ -384,13 +384,14 @@ export default function ProductDetail() {
         </div>
       )}
 
-      <div className="mt-12 flex justify-center">
-        <Link
-          to="/products"
-          className="bg-[#004b93] text-black hover:text-white px-6 py-2 rounded"
-        >
-          ← Back to Products
-        </Link>
+<div className="mt-12 flex justify-center">
+  <Link
+    to="/products"
+    className="bg-white text-black border border-[#004b93] px-6 py-2 rounded hover:bg-[#004b93] hover:text-white transition"
+  >
+    ← Back to Products
+  </Link>
+
       </div>
     </div>
   );

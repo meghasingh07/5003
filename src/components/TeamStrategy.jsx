@@ -31,24 +31,27 @@ const TeamStrategy = () => {
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">Qualified Team</h2>
         <p className="mt-4 text-gray-600 max-w-4xl mx-auto">
-          As a leading company, we aim to go beyond the norm by combining experience,
-          collaboration, and a results-driven mindset.
+          As a leading company, we aim to go beyond the norm by combining
+          experience, collaboration, and a results-driven mindset.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {teamData.map((item) => (
           <div
             key={item.id}
             className={`relative overflow-hidden rounded-lg shadow-lg group ${
               item.layout || ""
-            }`}
+            } ${item.id === 1 ? "h-60 md:h-125" : "h-48 md:h-60"}`}
           >
             <img
               src={item.image}
               alt={item.label}
-              className="w-full h-full object-cover transform transition duration-500 group-hover:scale-105"
+              className={`w-full h-full transform transition duration-500 group-hover:scale-105 object-cover ${
+                item.id === 1 ? "object-top" : "object-center"
+              }`}
             />
+
             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
               <h3 className="text-white text-2xl font-bold">{item.label}</h3>
             </div>
