@@ -71,11 +71,16 @@ export default function CaseStudies() {
    
       <button
   type="button"
-  className="mt-12 bg-[#004b93] text-white border-2 border-[#004b93] font-semibold text-lg px-6 py-3 rounded transition-all duration-300 hover:bg-white hover:text-black"
   onClick={() => navigate("/products")}
+  className="mt-12 mb-10 bg-[#004b93] text-white border-2 border-[#004b93] font-semibold text-lg px-6 py-3 rounded 
+             transition-all duration-500 ease-in-out transform 
+             hover:bg-white hover:text-[#004b93] hover:scale-105 hover:-translate-y-1 
+             active:scale-95"
 >
   See more products
 </button>
+
+
 
 
     </div>

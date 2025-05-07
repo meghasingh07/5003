@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import AnimatedLetters from "./AnimatedLetters";
 import NavBarTop from "./NavBarTop";
 import NavBarMain from "./NavBarMain";
+import './hero.css';
 
 export default function HeroSection({ onGetQuoteClick }) {
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -79,14 +80,12 @@ export default function HeroSection({ onGetQuoteClick }) {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-          <button
-            onClick={onGetQuoteClick}
-            className="bg-[#004b93] text-white border-2 border-[#004b93] px-6 py-3 font-bold rounded-md text-base transition-all duration-300 hover:bg-white hover:text-black"
-          >
-            Get a quote
-          </button>
-        </div>
-      </div>
+  <button onClick={onGetQuoteClick} className="custom-quote-button">
+    Get a Quote
+  </button>
+</div>
+
+</div>
     </div>
   );
 }

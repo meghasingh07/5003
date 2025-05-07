@@ -38,7 +38,7 @@ export default function SendMessagePage() {
   return (
     <div className="bg-white min-h-screen">
       <div className="text-center py-10">
-        <h2 className="text-4xl font-bold text-[#0F3E3D]">Get in Touch</h2>
+        <h2 className="text-4xl font-bold text-black">Get in Touch</h2>
       </div>
 
       <div className="w-full h-[350px]">
@@ -55,7 +55,7 @@ export default function SendMessagePage() {
 
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="space-y-5">
-          <h3 className="text-2xl font-semibold text-[#0F3E3D] mb-4">
+          <h3 className="text-2xl font-semibold text-black mb-4">
             Contact Information
           </h3>
           <ul className="space-y-3 text-gray-700">

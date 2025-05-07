@@ -13,15 +13,12 @@ const Enquiry = () => {
       </div>
 
       <div
-  className="relative w-full h-[500px] bg-cover bg-center"
+  className="relative w-full h-[350px] bg-cover bg-center"
   style={{ backgroundImage: "url('/enqq.avif')" }} 
 >
   <div className="absolute inset-0 bg-black/50"></div>
   <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
     <h1 className="text-5xl md:text-6xl font-bold fade-in-up">Enquiry</h1>
-    <p className="text-lg mt-4 max-w-2xl text-gray-200">
-      Get in touch with us for business inquiries or further information.
-    </p>
   </div>
 </div>
 

@@ -40,7 +40,7 @@ export default function MarketingTeamPage() {
             whileTap={{ scale: 0.98 }}
             className="bg-[#004b93] text-white border-2 border-[#004b93] font-semibold px-6 py-3 w-fit rounded shadow transition-all duration-300 hover:bg-white hover:text-black"
           >
-            Learn more
+            Learn More
           </motion.button>
         </div>
 

@@ -45,56 +45,56 @@ export default function FlipCardsSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
         {cardData.map((card, index) => (
           <div
-            key={card.id}
-            className="group"
-            onMouseEnter={() => setHovered(index)}
-            onMouseLeave={() => setHovered(null)}
-            style={{ perspective: 1000 }}
+          key={card.id}
+          className="group"
+          onMouseEnter={() => setHovered(index)}
+          onMouseLeave={() => setHovered(null)}
+          style={{ perspective: 1000 }}
+        >
+          <div
+            className="relative w-full h-[400px] transition-transform duration-700 shadow-xl rounded-xl"
+            style={{
+              transformStyle: "preserve-3d",
+              transform: hovered === index ? "rotateY(180deg)" : "rotateY(0deg)",
+            }}
           >
-           <div
-  className="relative w-full h-[400px] transition-transform duration-700 shadow-2xl shadow-black/70"
+            {/* Front */}
+            <div
+              className="absolute w-full h-full rounded-xl overflow-hidden"
               style={{
-                transformStyle: "preserve-3d",
-                transform:
-                  hovered === index ? "rotateY(180deg)" : "rotateY(0deg)",
+                backfaceVisibility: "hidden",
+                backgroundImage: `url(${card.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
-              <div
-                className="absolute w-full h-full rounded-xl overflow-hidden"
-                style={{
-                  backfaceVisibility: "hidden",
-                  backgroundImage: `url(${card.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="flex flex-col justify-end h-full p-6 space-y-2 bg-black/40">
-                  <div className="text-white text-xl font-bold">
-                    {card.name}
-                  </div>
-                  <div className="text-white text-sm">{card.role}</div>
-                </div>
-              </div>
-
-              <div
-                className="absolute w-full h-full bg-[#004b93] text-white rounded-xl p-6 flex flex-col items-center justify-center space-y-4"
-                style={{
-                  transform: "rotateY(180deg)",
-                  backfaceVisibility: "hidden",
-                }}
-              >
-                <p className="text-center text-sm max-w-xs">{card.backText}</p>
-                <a
-                  href={card.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-black border border-[#004b93] px-4 py-2 rounded hover:bg-[#004b93] hover:text-white transition"
-                >
-                  View LinkedIn
-                </a>
+              <div className="flex flex-col justify-end h-full p-6 bg-black/40">
+                <div className="text-white text-xl font-bold">{card.name}</div>
+                <div className="text-white text-sm">{card.role}</div>
               </div>
             </div>
+        
+            {/* Back */}
+            <div
+              className="absolute w-full h-full rounded-xl bg-[#004b93] text-white p-6 flex flex-col items-center justify-center space-y-4"
+              style={{
+                transform: "rotateY(180deg)",
+                backfaceVisibility: "hidden",
+              }}
+            >
+              <p className="text-center text-sm max-w-xs">{card.backText}</p>
+              <a
+                href={card.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black border border-[#004b93] px-4 py-2 rounded hover:bg-[#004b93] hover:text-white transition-all duration-300"
+              >
+                View LinkedIn
+              </a>
+            </div>
           </div>
+        </div>
+        
         ))}
       </div>
     </div>

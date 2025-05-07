@@ -13,15 +13,13 @@ const News = () => {
         <NavBarMain />
       </div>
 
-      <div className="relative w-full h-[400px] bg-cover bg-center" style={{ backgroundImage: "url('/news.jpg')" }}>
+      <div className="relative w-full h-[350px] bg-cover bg-center" style={{ backgroundImage: "url('/news.jpg')" }}>
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
           <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
             Latest News
           </h1>
-          <p className="text-lg mt-4 max-w-2xl text-gray-200">
-            Stay updated with our latest announcements, stories, and insights.
-          </p>
+          
         </div>
       </div>
 

@@ -41,6 +41,7 @@ export default function TestimonialSection() {
           <h2 className="text-4xl font-bold mb-6 text-white">Testimonials</h2>
           <p className="text-gray-300 text-base">
             What our customers are saying about their experience with Vihan India.
+            Hear how Vihan India is transforming businesses with cutting-edge innovation and unmatched customer satisfaction.
           </p>
         </div>
 

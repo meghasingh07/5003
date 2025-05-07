@@ -84,13 +84,14 @@ const EnquiryForm = () => {
                 <Field
                   as="select"
                   name="fileType"
-                  className="border px-4 py-2 w-full"
+                  className="border rounded-md px-4 py-2 w-full"
                 >
                   <option value="">Select file type</option>
                   <option value="pdf">PDF</option>
                   <option value="image">Image</option>
                 </Field>
               </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
                 {[
                   { name: "fullName", label: "Full Name" },
@@ -98,20 +99,13 @@ const EnquiryForm = () => {
                   { name: "email", label: "Email" },
                   { name: "company", label: "Company (Optional)" },
                 ].map(({ name, label }) => (
-                  <div key={name} className="relative z-0 w-full group">
+                  <div key={name}>
                     <Field
                       type="text"
                       name={name}
-                      id={name}
-                      className="peer block w-full border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none"
-                      placeholder=" "
+                      placeholder={label}
+                      className="w-full border rounded-md px-4 py-2 text-sm"
                     />
-                    <label
-                      htmlFor={name}
-                      className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-2 peer-focus:scale-75 peer-focus:-translate-y-6"
-                    >
-                      {label}
-                    </label>
                     <ErrorMessage
                       name={name}
                       component="div"
@@ -120,14 +114,11 @@ const EnquiryForm = () => {
                   </div>
                 ))}
                 <div className="md:col-span-2">
-                  <label className="block mb-1 text-sm font-medium">
-                    Address
-                  </label>
                   <Field
                     name="address"
                     as="textarea"
-                    className="border px-3 py-2 w-full h-24"
                     placeholder="Address"
+                    className="border px-4 py-2 w-full h-24 rounded-md"
                   />
                   <ErrorMessage
                     name="address"
@@ -139,7 +130,7 @@ const EnquiryForm = () => {
             </motion.div>
 
             <motion.div
-              className="border p-4 space-y-4 rounded bg-white/60"
+              className="border p-4 space-y-4 rounded-lg bg-white/60"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -149,15 +140,15 @@ const EnquiryForm = () => {
                 <Field
                   name="enquiryNumber"
                   placeholder="Enquiry Number"
-                  className="border px-3 py-2 w-full"
+                  className="border rounded-md px-4 py-2 w-full"
                 />
                 <Field
                   type="date"
                   name="enquiryDate"
-                  className="border px-3 py-2 w-full"
+                  className="border rounded-md px-4 py-2 w-full"
                 />
               </div>
-              <div className="bg-[#004b93] text-white font-bold text-center py-2">
+              <div className="bg-[#004b93] text-white font-bold text-center py-2 rounded">
                 Exhibition Name
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -165,22 +156,16 @@ const EnquiryForm = () => {
                   <label className="text-sm">Customer status:</label>
                   {radioOptions.customerStatus.map((status) => (
                     <label key={status} className="flex items-center gap-1">
-                      <Field
-                        type="radio"
-                        name="customerStatus"
-                        value={status}
-                      />
+                      <Field type="radio" name="customerStatus" value={status} />
                       {status}
                     </label>
                   ))}
                 </div>
-                <div>
-                  <Field
-                    name="handler"
-                    placeholder="Handled By"
-                    className="border px-3 py-2 w-full"
-                  />
-                </div>
+                <Field
+                  name="handler"
+                  placeholder="Handled By"
+                  className="border rounded-md px-4 py-2 w-full"
+                />
               </div>
               <div className="flex gap-6 flex-wrap items-center">
                 <label>Enquiry Prospect:</label>
@@ -205,7 +190,7 @@ const EnquiryForm = () => {
                 <Field
                   as="select"
                   name="productCategory"
-                  className="w-full border px-4 py-2"
+                  className="w-full border rounded-md px-4 py-2"
                 >
                   <option value="">Select your Product Category</option>
                   {productCategories.map((cat) => (
@@ -218,7 +203,7 @@ const EnquiryForm = () => {
                   name="details"
                   as="textarea"
                   placeholder="Add Details here..."
-                  className="w-full border px-3 py-2 h-24"
+                  className="w-full border rounded-md px-4 py-2 h-24"
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
@@ -228,7 +213,7 @@ const EnquiryForm = () => {
                     <input
                       type="file"
                       name="file"
-                      className="border px-2 py-1 w-full"
+                      className="border rounded-md px-2 py-1 w-full"
                     />
                   </div>
                   <div>
@@ -246,8 +231,7 @@ const EnquiryForm = () => {
                     <div className="flex gap-3">
                       {radioOptions.thankyou.map((opt) => (
                         <label key={opt} className="flex items-center gap-1">
-                          <Field type="radio" name="thankyou" value={opt} />{" "}
-                          {opt}
+                          <Field type="radio" name="thankyou" value={opt} /> {opt}
                         </label>
                       ))}
                     </div>
@@ -265,7 +249,7 @@ const EnquiryForm = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-[#004b93] text-white px-6 py-2 mt-6 border border-blue-600 hover:bg-white hover:text-black hover:border-blue-600 transition duration-300 rounded"
+                className="bg-[#004b93] text-white px-6 py-2 mt-6 border border-blue-600 hover:bg-white hover:text-black hover:border-blue-600 transition duration-300 rounded-lg"
               >
                 SUBMIT
               </button>

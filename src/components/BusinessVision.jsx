@@ -59,8 +59,9 @@ const BusinessVision = () => {
   };
 
   return (
-    <div className="bg-gray-50 px-4 md:px-12 py-8">
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
+    <div className="bg-gray-50 px-4 md:px-12 py-12">
+     <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-start">
+
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Inspiration, innovation, and opportunities.
@@ -105,7 +106,7 @@ const BusinessVision = () => {
           </div>
         </div>
 
-        <div className="rounded-lg overflow-hidden shadow-xl h-full">
+        <div className="rounded-lg overflow-hidden shadow-xl h-[500px]">
           <img
             src="/work.jpg"
             alt="Teamwork"
@@ -118,21 +119,21 @@ const BusinessVision = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl w-full">
           {cardItems.map((item, index) => (
             <div
-              key={index}
-              className="group relative bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 text-center"
-            >
-              <img
-                src={item.icon}
-                alt={item.title}
-                className="w-12 h-12 mx-auto mb-4"
-              />
-              <h3 className="font-bold text-lg text-gray-800">{item.title}</h3>
-              <p className="text-gray-500 text-sm">{item.subtitle}</p>
+            key={index}
+            className="bg-white rounded-xl p-8 shadow-lg text-center"
+          >
+            <img
+              src={item.icon}
+              alt={item.title}
+              className="w-12 h-12 mx-auto mb-4"
+            />
+            <h3 className="font-bold text-lg text-gray-800">{item.title}</h3>
+            <p className="text-gray-500 text-sm">{item.subtitle}</p>
+          
+          
 
               <div className="absolute inset-x-0 bottom-0.5 flex justify-center opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300">
-                <div className="text-[#004b93] font-semibold flex items-center gap-1 hover:underline cursor-pointer">
-                  Learn more 
-                </div>
+                
               </div>
             </div>
           ))}

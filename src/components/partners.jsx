@@ -37,7 +37,7 @@ const BusinessPartners = () => {
         <p className="text-sm font-medium text-gray-600">
           A deep commitment to diversity
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 ">
           Business Partners
         </h2>
       </motion.div>

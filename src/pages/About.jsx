@@ -10,8 +10,6 @@ import Footer from "../components/Footer";
 const aboutContent = [
   {
     heading: "About",
-    paragraph:
-      "At Vihan, we specialize in manufacturing high-performance pipe-making machinery designed for reliability and innovation. Our mission is to power industrial growth with cutting-edge technology and top-tier service.",
   },
 ];
 
@@ -24,7 +22,7 @@ const About = () => {
       </div>
 
       <div
-        className="relative w-full h-[500px] bg-cover bg-center"
+        className="relative w-full h-[350px] bg-cover bg-center"
         style={{
           backgroundImage: `url("/titlebar.jpeg")`,
         }}
@@ -36,23 +34,22 @@ const About = () => {
             key={index}
             className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
           >
-            <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
+            <h1 className="text-5xl md:text-6xl mt-6 font-bold fade-in-up">
               {item.heading}
             </h1>
-            <p className="mt-4 text-lg md:text-xl max-w-2xl fade-in-up delay-1">
-              {item.paragraph}
-            </p>
+           
           </div>
         ))}
       </div>
 
-      <div className="bg-white text-black">
+      <div className="relative min-h-screen text-white [*]:mb-0">
         <TeamStrategy />
         <BusinessVision />
         <OurTeamSection />
         <BusinessPartners />
-        <Footer />
+       
       </div>
+      <Footer />
     </div>
   );
 };

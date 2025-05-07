@@ -1,6 +1,9 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import NavBarTop from "../components/NavBarTop";
+import NavBarMain from "../components/NavBarMain";
+import Footer from "../components/Footer";
 
 const productDetails = {
   "haul-off": {
@@ -172,7 +175,7 @@ const productDetails = {
   "pipe-packaging": {
     title: "PIPE PACKING",
     series: "PACK 50 SERIES",
-    image: "/Pipe Packaging0.webp", 
+    image: "/Pipe Packaging0.webp",
     features: [
       "Integrated Automated Pipe Packaging Solution",
       "Human Error Eliminated",
@@ -183,24 +186,24 @@ const productDetails = {
     ],
     downloadLink: "#",
     contactLink: "/contact",
-    table: [], 
+    table: [],
   },
   "special-purpose-pvc-solution": {
     title: "CUSTOM PIPE INDUSTRY",
     series: "SOLUTIONS",
-    image: "/Special Purpose PVC Solution0.webp", 
+    image: "/Special Purpose PVC Solution0.webp",
     features: [
       "We offer turn key engineering consultancy services for Material Handling, Conveying & Packaging solutions for Plastics Industry.",
       "We are proud to have technically assisted Unicor Gmbh in developing a customized solution.",
     ],
-    downloadLink: "#", 
+    downloadLink: "#",
     contactLink: "/contact",
     table: [],
   },
   "belling-or-socketing": {
     title: "BELLING AND SOCKETING",
     series: "SOLUTIONS",
-    image: "/logoo.webp", 
+    image: "/logoo.webp",
     features: [
       "GlueE SERIES: Inline PVC Pipe Belling Machine for Pressure & Non-Pressure Pipes",
       "ACCUFORM SERVO SERIES: Inline Servo Controlled PVC Pipe Belling Machine for Drainage/Waste/Sewer Applications",
@@ -209,23 +212,23 @@ const productDetails = {
     ],
     downloadLink: "#",
     contactLink: "/contact",
-    table: [], 
+    table: [],
   },
   "cutter-series": {
     title: "CUTTER",
     series: "SERIES",
-    image: "/CUTTER SERIES1.webp", 
+    image: "/CUTTER SERIES1.webp",
     features: [
       "Saw, Planetary & Customize Cutting Solution for PVC, CPVC, HDPE & Profile",
     ],
-    downloadLink: "#", 
+    downloadLink: "#",
     contactLink: "/contact",
-    table: [], 
+    table: [],
   },
   "pipe-repair-coupler": {
     title: "COUPLER",
     series: "SERIES",
-    image: "/Pipe Repair Coupler1.webp", 
+    image: "/Pipe Repair Coupler1.webp",
     features: [
       "Energy efficient machine",
       "Reduced maintenance",
@@ -241,7 +244,7 @@ const productDetails = {
     optionalAccessories: [
       "Automatic Chamfering system integrated with belling machine to eliminate line speed constraint of inline planetary cutter cum chamfering machine",
     ],
-    downloadLink: "#", 
+    downloadLink: "#",
     contactLink: "/contact",
     table: [
       {
@@ -278,7 +281,6 @@ const productDetails = {
   },
 };
 
-
 export default function ProductDetail() {
   const { slug } = useParams();
   const product = productDetails[slug];
@@ -290,8 +292,11 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-white via-gray-50 to-white min-h-screen px-4 py-10 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+    <div className="bg-gradient-to-br from-blue-400 via-15% to-white min-h-screen">
+      <NavBarTop />
+      <NavBarMain />
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
+
         {/* Left Text Section */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -408,7 +413,7 @@ export default function ProductDetail() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.3 }}
-        className="mt-12 flex justify-center"
+        className="mt-12 mb-20 flex justify-center"
       >
         <Link
           to="/products"
@@ -417,6 +422,8 @@ export default function ProductDetail() {
           ← Back to Products
         </Link>
       </motion.div>
+
+      <Footer />
     </div>
   );
 }

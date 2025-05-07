@@ -1,0 +1,20 @@
+.custom-quote-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #004b93;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-quote-button:hover {
+  background-color: #004b93;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 75, 147, 0.3);
+}

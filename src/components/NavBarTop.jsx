@@ -57,13 +57,13 @@ export default function NavBarTop() {
             <div className="absolute right-0 top-full mt-2 w-48 bg-white text-black rounded-md shadow-lg z-[100]">
               <ul className="divide-y divide-gray-200">
                 <li className="p-3 hover:bg-gray-100 cursor-pointer">
-                Help Center
+                 Disclaimer
                 </li>
                 <li className="p-3 hover:bg-gray-100 cursor-pointer">
-                  Terms of Use
+                  Privacy Policies
                 </li>
                 <li className="p-3 hover:bg-gray-100 cursor-pointer">
-                  Disclaimer
+                  Terms and Conditions
                 </li>
               </ul>
             </div>

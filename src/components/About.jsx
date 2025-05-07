@@ -50,7 +50,7 @@ const About = ({ formRef }) => {
     >
       <div className="grid md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center">
-          <h3 className="text-sm font-bold text-gray-800">About us</h3>
+          <h3 className="text-sm font-bold text-gray-800">About Us</h3>
           <h2 className="text-4xl font-bold text-gray-900 mt-2">
             Machinery Designed
             <br />
@@ -84,10 +84,10 @@ const About = ({ formRef }) => {
         <div ref={formRef} className="relative">
           <div className="md:absolute md:-top-40 md:right-0 w-full md:w-[400px] bg-white shadow-xl rounded-xl p-6 md:p-8 z-10">
             <h4 className="text-md font-semibold text-gray-800 mb-1">
-              Send a message
+              Send a Message
             </h4>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Connect with us
+              Connect With Us
             </h3>
 
             <Formik
@@ -182,12 +182,17 @@ const About = ({ formRef }) => {
                     </div>
                   ))}
 
-                  <button
-                    type="submit"
-                    className="w-full bg-[#004b93] text-white border-2 border-[#004b93] font-semibold py-3 rounded-md transition-all duration-300 hover:bg-white hover:text-black"
-                  >
-                    Get a quote
-                  </button>
+<button
+  type="submit"
+  className="w-full bg-[#004b93] text-white border-2 border-[#004b93] font-semibold py-3 rounded-md 
+             transition-all duration-300 ease-in-out transform 
+             hover:bg-white hover:text-black hover:scale-105 hover:-translate-y-1 hover:shadow-xl 
+             active:scale-95"
+>
+  Get a Quote
+</button>
+
+
 
                   {submittedName && (
                     <div className="mt-4 bg-emerald-500 text-white px-4 py-2 rounded text-center">
