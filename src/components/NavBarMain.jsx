@@ -26,15 +26,16 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
   return (
     <>
       <div className="flex justify-between items-center px-6 md:px-16 py-3">
-        {/* Logo with animation and link */}
         <a
           href="/"
-          className="flex items-center gap-2 font-bold text-xl transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
+          className="flex items-center gap-2 font-bold text-xl transition-transform duration-300 hover:scale-105"
+          style={{
+            filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2))",
+          }}
         >
           <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
         </a>
 
-        {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-10 font-semibold text-center ml-auto group">
           {menuItems.map((item, i) => (
             <div
@@ -61,7 +62,6 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
         </div>
       </div>
 
-      {/* Mobile menu with animation */}
       <AnimatePresence>
         {isMobileOpen && (
           <Dialog
@@ -80,12 +80,8 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
                 <motion.img
                   src="/logoo.webp"
                   alt="Logo"
-                  className="h-10 w-auto"
-                  style={{
-                    filter: "drop-shadow(0 6px 12px rgba(0, 0, 0, 0.8))",
-                  }}
+                  className="h-10 w-auto drop-shadow-md"
                   whileHover={{
-                    rotate: 8,
                     scale: 1.08,
                   }}
                   transition={{ type: "spring", stiffness: 180, damping: 12 }}

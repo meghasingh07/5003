@@ -38,7 +38,6 @@ const validationSchema = Yup.object({
   email: Yup.string().email("Invalid email").required("Email is required"),
   phone: Yup.string().required("Phone number is required"),
   message: Yup.string().required("Message is required"),
-  terms: Yup.boolean().oneOf([true], "You must accept the terms"),
 });
 
 const About = ({ formRef }) => {
@@ -65,8 +64,10 @@ const About = ({ formRef }) => {
             rotation.
           </p>
           <p className="mt-2 text-gray-600">
-  Our offerings include PVC pipe bending machines, pipe packaging systems, cutter series, and much more — empowering smart pipe production that’s reliable in every rotation.
-</p>
+            Our offerings include PVC pipe bending machines, pipe packaging
+            systems, cutter series, and much more — empowering smart pipe
+            production that’s reliable in every rotation.
+          </p>
 
           <Link to="/send-message" className="mt-6 flex justify-start">
             <motion.button
@@ -96,7 +97,6 @@ const About = ({ formRef }) => {
                 email: "",
                 phone: "",
                 message: "",
-                terms: false,
               }}
               validationSchema={validationSchema}
               onSubmit={(values, { resetForm }) => {
@@ -108,7 +108,6 @@ const About = ({ formRef }) => {
             >
               {({ errors, touched }) => (
                 <Form className="space-y-4">
-                  {/* First & Last Name Side-by-side */}
                   <div className="flex gap-4">
                     {[formFields[0], formFields[1]].map((field) => (
                       <div key={field.name} className="w-1/2">
@@ -140,7 +139,6 @@ const About = ({ formRef }) => {
                     ))}
                   </div>
 
-                  {/* Rest of the fields */}
                   {formFields.slice(2).map((field) => (
                     <div key={field.name}>
                       {field.type === "textarea" ? (
@@ -183,12 +181,6 @@ const About = ({ formRef }) => {
                       />
                     </div>
                   ))}
-
-                  <ErrorMessage
-                    name="terms"
-                    component="div"
-                    className="text-red-500 text-sm"
-                  />
 
                   <button
                     type="submit"
