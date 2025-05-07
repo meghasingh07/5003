@@ -14,7 +14,7 @@ const Enquiry = () => {
 
       <div
   className="relative w-full h-[350px] bg-cover bg-center"
-  style={{ backgroundImage: "url('/enqq.avif')" }} 
+  style={{ backgroundImage: "url('/enquiry-1.webp')" }} 
 >
   <div className="absolute inset-0 bg-black/50"></div>
   <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">

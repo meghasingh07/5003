@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
 import { FiMapPin, FiMail, FiPhone } from "react-icons/fi";
+import "./hero.css";
 
 const formFields = [
   { name: "firstName", placeholder: "First name", type: "text" },
@@ -56,7 +57,7 @@ const ContactForm = () => {
           className="bg-white shadow-2xl rounded-2xl p-6 md:p-8 border w-full md:w-[42%]"
           variants={fadeIn}
         >
-          <h2 className="text-3xl font-bold text-blue-800 mb-6">
+          <h2 className="text-3xl font-bold text-black mb-6">
             Connect With Us
           </h2>
           <Formik
@@ -114,8 +115,8 @@ const ContactForm = () => {
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="w-full bg-[#004b93] text-white font-semibold py-3 rounded-lg border border-blue-600 hover:bg-white hover:text-black transition duration-300"
+                
+                  className=" custom-quote-button w-full bg-[#004b93] text-white font-semibold py-3 rounded-lg border border-blue-600 hover:bg-white hover:text-black "
                 >
                   Get a Quote
                 </motion.button>

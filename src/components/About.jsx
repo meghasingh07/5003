@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import "./case.css";
 
 const formFields = [
   {
@@ -182,17 +183,16 @@ const About = ({ formRef }) => {
                     </div>
                   ))}
 
-<button
-  type="submit"
-  className="w-full bg-[#004b93] text-white border-2 border-[#004b93] font-semibold py-3 rounded-md 
-             transition-all duration-300 ease-in-out transform 
-             hover:bg-white hover:text-black hover:scale-105 hover:-translate-y-1 hover:shadow-xl 
-             active:scale-95"
->
-  Get a Quote
-</button>
-
-
+                  <button
+                    type="submit"
+                    className=" custom-quote-button w-full bg-[#004b93] text-white border-2 border-[#004b93] font-semibold py-3 rounded-md 
+    ease-in-out transform 
+    hover:bg-white hover:text-black hover:scale-105 hover:-translate-y-1 
+    transition-transform duration-300 hover:shadow-xl 
+    active:scale-95"
+                  >
+                    Get a Quote
+                  </button>
 
                   {submittedName && (
                     <div className="mt-4 bg-emerald-500 text-white px-4 py-2 rounded text-center">

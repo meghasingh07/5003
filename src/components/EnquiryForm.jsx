@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
+import "./hero.css";
 
 const validationSchema = Yup.object({
   fullName: Yup.string().required("Required"),
@@ -249,7 +250,7 @@ const EnquiryForm = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-[#004b93] text-white px-6 py-2 mt-6 border border-blue-600 hover:bg-white hover:text-black hover:border-blue-600 transition duration-300 rounded-lg"
+                className=" custom-quote-button bg-[#004b93] text-white px-6 py-2 mt-6 border border-blue-600 hover:bg-white hover:text-black hover:border-blue-600 transition duration-300 rounded-lg"
               >
                 SUBMIT
               </button>

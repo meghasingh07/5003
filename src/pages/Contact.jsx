@@ -16,9 +16,9 @@ const Contact = () => {
 
       <div
   className="relative w-full h-[350px] bg-cover bg-center"
-  style={{ backgroundImage: "url('/contact.jpg')" }}  // Replace with your actual image path
+  style={{ backgroundImage: "url('/contact-1.webp')" }}  
 >
-  <div className="absolute inset-0 bg-black/60"></div>
+  <div className="absolute inset-0 bg-black/20"></div>
   <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
     <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
       Contact

@@ -33,7 +33,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
             filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2))",
           }}
         >
-          <img src="/logoo.webp" alt="Logo" className="h-10 w-auto" />
+          <img src="/log.png" alt="Logo" className="h-10 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-10 font-semibold text-center ml-auto group">
@@ -78,7 +78,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
             >
               <div className="flex justify-between items-center border-b pb-4">
                 <motion.img
-                  src="/logoo.webp"
+                  src="/log.png"
                   alt="Logo"
                   className="h-10 w-auto drop-shadow-md"
                   whileHover={{

@@ -3,7 +3,7 @@ import React from "react";
 const teamData = [
   {
     id: 1,
-    image: "/planing.jpg",
+    image: "/planing1.webp",
     label: " Planning",
     layout: "md:row-span-2 md:col-span-2",
   },
@@ -14,12 +14,12 @@ const teamData = [
   },
   {
     id: 3,
-    image: "/training.jpg",
+    image: "/training.webp",
     label: "Training",
   },
   {
     id: 4,
-    image: "/pipe.jpg",
+    image: "/pipe.webp",
     label: "Automation",
     layout: "md:col-span-3",
   },
@@ -48,8 +48,10 @@ const TeamStrategy = () => {
               src={item.image}
               alt={item.label}
               className={`w-full h-full transform transition duration-500 group-hover:scale-105 object-cover ${
-                item.id === 1 ? "object-top" : "object-center"
+                item.id === 1 ? "object-top" : item.id === 4 ? "object-center" : "object-scale-down"
               }`}
+              
+              
             />
 
             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">

@@ -54,35 +54,26 @@ export default function CaseStudies() {
         machinery to shape pipeline requirements.
       </p>
 
-      {/* Top Cards */}
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         {topCards.map((card, index) => (
           <Card key={index} card={card} />
         ))}
       </div>
 
-     
       <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {bottomCards.map((card, index) => (
           <Card key={index + 4} card={card} />
         ))}
       </div>
 
-   
       <button
-  type="button"
-  onClick={() => navigate("/products")}
-  className="mt-12 mb-10 bg-[#004b93] text-white border-2 border-[#004b93] font-semibold text-lg px-6 py-3 rounded 
-             transition-all duration-500 ease-in-out transform 
-             hover:bg-white hover:text-[#004b93] hover:scale-105 hover:-translate-y-1 
-             active:scale-95"
->
-  See more products
-</button>
-
-
-
-
+        type="button"
+        onClick={() => navigate("/products")}
+        className="mt-12 mb-10 reverse-button"
+      >
+        See more products
+      </button>
     </div>
   );
 }
