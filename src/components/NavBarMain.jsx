@@ -74,7 +74,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="absolute right-0 top-0 w-4/5 sm:w-1/2 h-full bg-white text-black p-6 shadow-2xl"
+              className="absolute right-0 top-0 w-4/5 sm:w-1/2 h-full bg-blue-200 text-black p-6 shadow-2xl"
             >
               <div className="flex justify-between items-center border-b pb-4">
                 <motion.img

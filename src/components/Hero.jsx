@@ -25,11 +25,11 @@ export default function HeroSection({ onGetQuoteClick }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Animate underline after all text is in
+ 
   useEffect(() => {
     const totalChars =
       "Pipe-Making".length + "With".length + "Superior  Machinery".length;
-    const delay = totalChars * 50 + 500; // Adjust for animation duration
+    const delay = totalChars * 50 + 500; 
     const timer = setTimeout(() => setShowUnderline(true), delay);
     return () => clearTimeout(timer);
   }, []);
