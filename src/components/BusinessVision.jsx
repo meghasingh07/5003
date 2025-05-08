@@ -108,7 +108,7 @@ const BusinessVision = () => {
 
         <div className="rounded-lg overflow-hidden shadow-xl h-[500px]">
           <img
-            src="/work.jpg"
+            src="/work1.webp"
             alt="Teamwork"
             className="w-full h-full object-cover"
           />

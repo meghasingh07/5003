@@ -24,21 +24,21 @@ const About = () => {
       <div
         className="relative w-full h-[350px] bg-cover bg-center"
         style={{
-          backgroundImage: `url("/about-1.webp")`,
+          backgroundImage: `url("/about-2.webp")`,
         }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 "></div>
 
         {aboutContent.map((item, index) => (
-          <div
-            key={index}
-            className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
-          >
-            <h1 className="text-5xl md:text-6xl mt-6 font-bold fade-in-up">
-              {item.heading}
-            </h1>
-           
-          </div>
+         <div
+         key={index}
+         className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-15"
+       >
+         <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
+           {item.heading}
+         </h1>
+       </div>
+       
         ))}
       </div>
 

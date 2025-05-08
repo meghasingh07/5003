@@ -14,9 +14,10 @@ const News = () => {
         <NavBarMain />
       </div>
 
-      <div className="relative w-full h-[350px] bg-cover bg-center" style={{ backgroundImage: "url('/new-1.webp')" }}>
+      <div className="relative w-full h-[350px] bg-cover bg-center" style={{ backgroundImage: "url('/new-2.webp')" }}>
         <div className="absolute inset-0 "></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-12">
+
           <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
             Latest News
           </h1>

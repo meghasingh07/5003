@@ -15,19 +15,18 @@ const Contact = () => {
       </div>
 
       <div
-  className="relative w-full h-[350px] bg-cover bg-center"
-  style={{ backgroundImage: "url('/contact-1.webp')" }}  
->
-  <div className="absolute inset-0 bg-black/20"></div>
-  <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-    <h1 className="text-5xl md:text-6xl font-bold fade-in-up">
-      Contact
-    </h1>
-  </div>
-</div>
+        className="relative w-full h-[350px] bg-cover bg-center"
+        style={{ backgroundImage: "url('/Untitled-1.webp')" }}
+      >
+        <div className="absolute inset-0 "></div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-12">
+
+          <h1 className="text-5xl md:text-6xl font-bold fade-in-up">Contact</h1>
+        </div>
+      </div>
 
       <ContactForm />
-      <Map/>
+      <Map />
       <Footer />
     </div>
   );

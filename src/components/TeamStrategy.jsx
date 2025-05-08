@@ -3,7 +3,7 @@ import React from "react";
 const teamData = [
   {
     id: 1,
-    image: "/planing1.webp",
+    image: "/pipe.webp",
     label: " Planning",
     layout: "md:row-span-2 md:col-span-2",
   },
@@ -19,7 +19,7 @@ const teamData = [
   },
   {
     id: 4,
-    image: "/pipe.jpg",
+    image: "/planing1.webp",
     label: "Automation",
     layout: "md:col-span-3",
   },

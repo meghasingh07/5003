@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FiMapPin, FiMail, FiPhone } from "react-icons/fi";
 import "./hero.css";
 
+// Form fields for the form
 const formFields = [
   { name: "firstName", placeholder: "First name", type: "text" },
   { name: "lastName", placeholder: "Last name", type: "text" },
@@ -12,6 +13,7 @@ const formFields = [
   { name: "phone", placeholder: "Phone number", type: "tel" },
 ];
 
+// Yup validation schema for the form
 const ContactSchema = Yup.object().shape({
   firstName: Yup.string().required("Required"),
   lastName: Yup.string().required("Required"),
@@ -20,11 +22,13 @@ const ContactSchema = Yup.object().shape({
   message: Yup.string().required("Required"),
 });
 
+// Motion variants for fadeIn animation
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
+// ContactCard component for address, email, phone info
 const ContactCard = ({ icon, title, text, delay }) => (
   <motion.div
     className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-blue-500 flex items-start gap-4"
@@ -45,21 +49,30 @@ const ContactForm = () => {
   const [submittedName, setSubmittedName] = useState("");
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-white py-20 px-6">
-      <motion.div
-        className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-12 items-start"
+    <section className="bg-gradient-to-br from-blue-50 to-white py-10 px-6">
+      {/* Heading */}
+      <motion.h2
+        className="text-4xl font-bold text-gray-800 text-center mb-10"
         initial="hidden"
         animate="visible"
         variants={fadeIn}
       >
-        {/* Contact Form (Left Side) */}
+        Contact Us
+      </motion.h2>
+
+      <motion.div
+        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
+        {/* Form Section */}
         <motion.div
-          className="bg-white shadow-2xl rounded-2xl p-6 md:p-8 border w-full md:w-[42%]"
+          className="w-full bg-white shadow-2xl rounded-2xl p-4 md:p-6 border transition-all duration-500"
           variants={fadeIn}
         >
-          <h2 className="text-3xl font-bold text-black mb-6">
-            Connect With Us
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Connect With Us</h2>
+
           <Formik
             initialValues={{
               firstName: "",
@@ -75,7 +88,7 @@ const ContactForm = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form className="space-y-5">
+              <Form className="space-y-4 w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {formFields.map((field) => (
                     <div key={field.name}>
@@ -99,8 +112,8 @@ const ContactForm = () => {
                     as="textarea"
                     name="message"
                     placeholder="Your message"
-                    rows="5"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 resize-none placeholder:text-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                    rows="3"
+                    className="w-full border min-h-[100px] max-h-[150px] border-gray-300 rounded-lg px-4 py-3 resize-none placeholder:text-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
                   />
                   {errors.message && touched.message && (
                     <div className="text-red-500 text-sm mt-1">
@@ -115,16 +128,14 @@ const ContactForm = () => {
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                
-                  className=" custom-quote-button w-full bg-[#004b93] text-white font-semibold py-3 rounded-lg border border-blue-600 hover:bg-white hover:text-black "
+                  className="custom-quote-button w-full bg-[#004b93] text-white font-semibold py-3 rounded-lg border border-blue-600 hover:bg-white hover:text-black transition-all"
                 >
                   Get a Quote
                 </motion.button>
 
                 {submittedName && (
-                  <p className="text-green-600 font-medium mt-4">
-                    Thanks {submittedName}, for your response. We will get in
-                    touch.
+                  <p className="text-green-600 font-medium mt-6 text-center">
+                    Thanks {submittedName}, we’ll be in touch shortly.
                   </p>
                 )}
               </Form>
@@ -132,25 +143,15 @@ const ContactForm = () => {
           </Formik>
         </motion.div>
 
-        {/* Right Side: Text + Contact Cards */}
-        <motion.div className="md:w-1/2 flex flex-col gap-6" variants={fadeIn}>
-          <div className="text-center md:text-left mb-4">
-            <p className="text-sm font-semibold text-blue-700 uppercase tracking-wide">
-              Get in touch
-            </p>
-            <h2 className="text-4xl font-extrabold text-gray-800 leading-snug">
-              We'd love to hear from you.
-            </h2>
-            <p className="text-gray-600 text-lg mt-2">
-              We are here to answer any question you may have.
-            </p>
-          </div>
-
+        {/* Address Section with contact cards */}
+        <motion.div
+          className="w-full flex flex-col gap-6 mt-4"
+          variants={fadeIn}
+        >
           <ContactCard
             icon={<FiMapPin />}
             title="Our Address"
-            text="Block No. 22B, Near Claris Pharmaceuticals,
-Sarkhej - Bavla Highway, Ahmedabad, Gujarat"
+            text="Block No. 22B, Near Claris Pharmaceuticals, Sarkhej - Bavla Highway, Ahmedabad, Gujarat"
             delay={0.2}
           />
           <ContactCard
@@ -163,7 +164,7 @@ Sarkhej - Bavla Highway, Ahmedabad, Gujarat"
             icon={<FiPhone />}
             title="Phone"
             text="91-9099032638"
-            delay={0.6}
+            delay={0.5}
           />
         </motion.div>
       </motion.div>

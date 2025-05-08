@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaTripadvisor } from "react-icons/fa";
+import "./hero.css";
 
 const NewsletterSection = () => {
   return (
@@ -25,16 +26,26 @@ const NewsletterSection = () => {
               placeholder="Enter your email address"
               className="bg-transparent w-full px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
             />
-            <button className="bg-blue-800 hover:bg-blue-600 transition-colors duration-300 rounded-full ml-2 p-2 w-10 h-10 flex items-center justify-center">
-              <span className="text-white text-base">→</span>
-            </button>
+            <button className="custom-button bg-blue-800 hover:bg-blue-600 transition-colors duration-300 ml-2 w-10 h-10 flex items-center justify-center">
+  <span className="text-white text-base">→</span>
+</button>
+
           </div>
 
           {/* Social Icons */}
           <div className="flex gap-5">
-            <FaInstagram className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer" size={24} />
-            <FaFacebookF className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer" size={24} />
-            <FaTripadvisor className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer" size={24} />
+            <FaInstagram
+              className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer"
+              size={24}
+            />
+            <FaFacebookF
+              className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer"
+              size={24}
+            />
+            <FaTripadvisor
+              className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer"
+              size={24}
+            />
           </div>
         </div>
       </div>

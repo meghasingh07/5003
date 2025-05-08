@@ -9,7 +9,7 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 px-6 md:px-16">
+    <footer className="bg-black  text-white py-6 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           <motion.div
@@ -23,13 +23,10 @@ const Footer = () => {
               Since 1994, Vihan India has been a pioneer in delivering durable,
               innovative, and efficient piping solutions. Our products are
               trusted by homeowners, engineers, and infrastructure developers
-              across the country for their reliability and performance. Backed
-              by decades of experience and a commitment to quality, we don’t
-              just manufacture pipelines—we deliver systems that stand the test
-              of time. At Vihan India, reliability is not a promise, it’s our
-              foundation.
+              across the country for their reliability and performance.
             </p>
-            <div className="flex space-x-4 mt-20">
+
+            <div className="flex space-x-4 mt-6">
               {socialIcons.map((icon, index) => (
                 <a
                   key={index}
@@ -80,13 +77,6 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="font-semibold text-lg mb-3">Contact</h3>
-            <p className="text-gray-300 text-sm mb-2">
-              <strong>Registered Office:</strong>
-              <br />
-              Block No. 22B, Near Claris Pharmaceuticals,
-              <br />
-              Sarkhej - Bavla Highway, Ahmedabad, Gujarat
-            </p>
             <p className="text-white font-semibold mt-3">Email:</p>
             <a
               href="mailto:sales@vihanindia.com"
@@ -138,12 +128,21 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-700 mt-10 pt-3 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
           <p>
             ©{new Date().getFullYear()}{" "}
             <span className="text-white">Vihan India</span>. All rights
-            reserved.
+            reserved. | Developed by{" "}
+            <a
+              href="https://www.weblozy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              weblozy.com
+            </a>
           </p>
+
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-[#004b93] transition">
               Privacy

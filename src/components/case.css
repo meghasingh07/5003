@@ -1,80 +1,77 @@
 .learn-more-text {
-    transform: scale(1);
-    transition: 
-      opacity 0.3s ease,
-      transform 0.3s ease,
-      color 0.3s ease;
-  }
-  
-  .learn-more-text:hover {
-    transform: scale(1.20);
-  }
-  .reverse-button {
-    background-color: #004b93;
-    color: white;
-    border: 2px solid #004b93;
-    font-weight:400;
-    font-size:medium; /* roughly text-lg */
-    
-    border-radius: 0.5rem; /* rounded */
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .reverse-button:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1.05) translateY(-0.25rem);
-  }
-  
-  .reverse-button:active {
-    transform: scale(0.95);
-  }
-  .button-outline-blue {
-    background-color: white;
-    color: black;
-    border: 2px solid #004b93;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
-    cursor: pointer;
-    display: inline-block; /* auto width based on content */
-    width: 120px; /* Ensure it's not full width */
-  }
-  
-  .button-outline-blue:hover {
-    background-color: #004b93;
-    color: white;
-    transform: scale(1.05) translateY(-0.25rem); /* Subtle scaling and translation */
-  }
-  
-  .button-outline-blue:active {
-    transform: scale(0.97); /* Slight shrink effect on active state */
-  }
-  
-  .button {
-    width: 100%;
-    background-color: #004b93;
-    color: white;
-    border: 2px solid #004b93;
-    font-weight: 600;
-    padding: 0.75rem 0; /* py-3 */
-    border-radius: 0.375rem; /* rounded-md */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
-    transform: translateY(0);
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1.05) translateY(-0.25rem); /* hover:scale-105 + hover:-translate-y-1 */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* hover:shadow-xl */
-  }
-  
-  .button:active {
-    transform: scale(0.95); /* active:scale-95 */
-  }
-  
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-text:hover {
+  transform: scale(1.2);
+}
+.reverse-button {
+  background-color: #004b93;
+  color: white;
+  border: 2px solid #004b93;
+  font-weight: 400;
+  font-size: medium;
+
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.reverse-button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05) translateY(-0.25rem);
+}
+
+.reverse-button:active {
+  transform: scale(0.95);
+}
+.button-outline-blue {
+  background-color: white;
+  color: black;
+  border: 2px solid #004b93;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  width: 120px;
+}
+
+.button-outline-blue:hover {
+  background-color: #004b93;
+  color: white;
+  transform: scale(1.05) translateY(-0.25rem);
+}
+
+.button-outline-blue:active {
+  transform: scale(0.97);
+}
+
+.button {
+  width: 100%;
+  background-color: #004b93;
+  color: white;
+  border: 2px solid #004b93;
+  font-weight: 600;
+  padding: 0.75rem 0;
+  border-radius: 0.375rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s;
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05) translateY(-0.25rem);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: scale(0.95);
+}

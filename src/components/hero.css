@@ -6,16 +6,19 @@
   font-weight: 600;
   font-size: 1rem;
   border-radius: 0.5rem;
-  transition: all 0.5s ease-in-out; /* Smooth transition */
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
 .custom-quote-button:hover {
   background-color: #004b93;
   color: white;
-  transform: scale(1.05) translateY(-0.25rem); /* Subtle scale and translate effect */
+  transform: scale(1.05) translateY(-0.25rem); 
 }
 
 .custom-quote-button:active {
-  transform: scale(0.95); /* Slight shrink effect on active state */
+  transform: scale(0.95);  
+}
+.custom-button{
+  border-radius: 50%;
 }
