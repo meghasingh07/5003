@@ -45,7 +45,7 @@ export default function TestimonialSection() {
           </p>
         </div>
 
-        {/* Right Card */}
+      
         <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 max-w-xl text-white relative shadow-lg border border-white/20 min-h-[240px]">
           <AnimatePresence mode="wait">
             <motion.div
@@ -66,7 +66,7 @@ export default function TestimonialSection() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Controls */}
+          
           <div className="flex justify-center gap-6 mt-8 text-lg text-white">
             <button
               onClick={handlePrev}

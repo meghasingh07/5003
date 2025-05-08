@@ -37,7 +37,7 @@ export default function Rotating() {
 
   return (
     <div className="w-full overflow-hidden">
-      {/* Hero section */}
+     
       <div
         className="bg-fixed bg-center bg-cover h-[450px] flex items-center justify-center relative"
         style={{ backgroundImage: "url('/fixed-bg.webp')" }}
@@ -50,7 +50,7 @@ export default function Rotating() {
         </h1>
       </div>
 
-      {/* Rotating logos */}
+     
       <div className="bg-gradient-to-r from-white to-gray-100 py-12 px-4 text-center shadow-inner">
         <p className="text-gray-600 text-lg mb-8">
           Join our customers in trusting Vihan.

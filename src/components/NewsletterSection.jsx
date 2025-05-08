@@ -6,7 +6,7 @@ const NewsletterSection = () => {
   return (
     <div className="bg-white text-white px-4 py-10 md:py-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-        {/* Left Text */}
+       
         <div className="w-full md:w-1/2 text-center md:text-left">
           <p className="text-sm tracking-widest text-blue-800 mb-2 uppercase">
             Newsletter
@@ -32,7 +32,7 @@ const NewsletterSection = () => {
 
           </div>
 
-          {/* Social Icons */}
+         
           <div className="flex gap-5">
             <FaInstagram
               className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer"

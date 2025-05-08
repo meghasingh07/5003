@@ -40,7 +40,7 @@ export default function NavBarMain({ pagesRef, isPagesOpen, setIsPagesOpen }) {
           {menuItems.map((item, i) => (
             <div
               key={i}
-              className="relative flex items-start gap-1 font-bold transition duration-300 cursor-pointer hover:text-[#004b93] group-hover:opacity-60 hover:opacity-100"
+              className="relative flex items-start gap-1 font-bold transition duration-300 cursor-pointer hover:text-black group-hover:opacity-60 hover:opacity-100"
             >
               <a href={item.href}>{item.label}</a>
             </div>
