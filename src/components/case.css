@@ -35,24 +35,25 @@
     color: black;
     border: 2px solid #004b93;
     font-weight: 600;
-    font-size: 1rem;        
-    padding: 0.5rem 1rem;    
-    border-radius: 0.375rem; 
-    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
     cursor: pointer;
-    display: inline-block;    /* auto width based on content */
-    width: 120px;              /* ensure it's not full width */
+    display: inline-block; /* auto width based on content */
+    width: 120px; /* Ensure it's not full width */
   }
   
   .button-outline-blue:hover {
     background-color: #004b93;
     color: white;
-    transform: scale(1.05) translateY(-0.25rem);
+    transform: scale(1.05) translateY(-0.25rem); /* Subtle scaling and translation */
   }
   
   .button-outline-blue:active {
-    transform: scale(0.97);
+    transform: scale(0.97); /* Slight shrink effect on active state */
   }
+  
   .button {
     width: 100%;
     background-color: #004b93;

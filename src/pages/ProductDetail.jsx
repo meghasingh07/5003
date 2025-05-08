@@ -292,7 +292,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-blue-400 via-15% to-white min-h-screen">
+    <div className="bg-gradient-to-br from-blue-400 via-5% to-white min-h-screen">
       <NavBarTop />
       <NavBarMain />
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">

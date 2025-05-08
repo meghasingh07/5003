@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import AnimatedLetters from "./AnimatedLetters";
 import NavBarTop from "./NavBarTop";
 import NavBarMain from "./NavBarMain";
-import './hero.css';
+import "./hero.css";
 
 export default function HeroSection({ onGetQuoteClick }) {
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -70,7 +70,10 @@ export default function HeroSection({ onGetQuoteClick }) {
             <AnimatedLetters text="With" delayStart={0.4} />
           </span>
           <span className="block">
-            <AnimatedLetters text="Superior &nbsp; Machinery" delayStart={0.8} />
+            <AnimatedLetters
+              text="Superior &nbsp; Machinery"
+              delayStart={0.8}
+            />
           </span>
         </h1>
 
@@ -80,12 +83,11 @@ export default function HeroSection({ onGetQuoteClick }) {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-  <button onClick={onGetQuoteClick} className="custom-quote-button">
-    Get a Quote
-  </button>
-</div>
-
-</div>
+          <button onClick={onGetQuoteClick} className="custom-quote-button">
+            Get a Quote
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

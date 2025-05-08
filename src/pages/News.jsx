@@ -3,6 +3,7 @@ import NavBarTop from "../components/NavBarTop";
 import NavBarMain from "../components/NavBarMain";
 import Footer from "../components/Footer";
 import HubNews from "../components/News";
+import NewsletterSection from "../components/NewsletterSection";
 
 
 const News = () => {
@@ -24,6 +25,7 @@ const News = () => {
       </div>
 
        <HubNews/>
+       <NewsletterSection/>
       <Footer />
     </div>
   );

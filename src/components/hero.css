@@ -6,15 +6,16 @@
   font-weight: 600;
   font-size: 1rem;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-in-out; /* Smooth transition */
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
-    
 }
 
 .custom-quote-button:hover {
   background-color: #004b93;
   color: white;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 75, 147, 0.3);
+  transform: scale(1.05) translateY(-0.25rem); /* Subtle scale and translate effect */
+}
+
+.custom-quote-button:active {
+  transform: scale(0.95); /* Slight shrink effect on active state */
 }
