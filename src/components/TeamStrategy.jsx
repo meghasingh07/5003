@@ -19,7 +19,7 @@ const teamData = [
   },
   {
     id: 4,
-    image: "/pipe.webp",
+    image: "/pipe.jpg",
     label: "Automation",
     layout: "md:col-span-3",
   },
@@ -48,7 +48,7 @@ const TeamStrategy = () => {
               src={item.image}
               alt={item.label}
               className={`w-full h-full transform transition duration-500 group-hover:scale-105 object-cover ${
-                item.id === 1 ? "object-top" : item.id === 4 ? "object-center" : "object-scale-down"
+                item.id === 1 ? "object-top" : item.id === 4 ? "object-center" : "object-top"
               }`}
               
               
