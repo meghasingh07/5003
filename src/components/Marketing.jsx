@@ -3,14 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./case.css";
 const services = [
   {
-    title: "Engineering Brilliance For Pipe Plants.",
+    title: "Engineering Smart Solutions for Pipe Production",
     description:
-      "We engineer machines that solve day-to-day problems. Create pipes with no cracks, only seamless flow.",
+      "Our machines are designed to solve real-world manufacturing challenges — enabling precise, crack-free, and efficient pipe fitting production.",
   },
   {
-    title: "Building Performance-First Machines.",
+    title: "Performance-Driven & Environment-Conscious Machinery",
     description:
-      "We aim to elevate your pipe production line with our machinery. Evolve pipe industry through our innovative technology.",
+      "We build high-performance machines with eco-friendly practices, helping pipe plants achieve quality and sustainability together.",
   },
   {
     title: "Eco-Friendly Method Of Manufacturing",
@@ -28,11 +28,12 @@ export default function MarketingTeamPage() {
         {/* Left Section */}
         <div className="flex flex-col justify-center space-y-5">
           <h1 className="text-3xl md:text-5xl font-bold text-black leading-tight">
-            Crafting The Future Of Pipe Manufacturing Machines.
+            Shaping the Future of Pipe Fitting Machinery
           </h1>
           <p className="text-gray-500 max-w-md text-sm md:text-base">
-            We help our customers in building smart infrastructure through our
-            reliable and smart machines.
+            We support pipe manufacturers in building smarter infrastructure
+            with our advanced, reliable machines designed for seamless pipe
+            fitting production.
           </p>
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -51,7 +52,7 @@ export default function MarketingTeamPage() {
                 className={`cursor-pointer flex items-center justify-between px-6 py-3 rounded transition-all duration-300 ${
                   index === activeIndex
                     ? "bg-[#004b93] text-white"
-                    : "text-[#0F3E3D] border-l-4 border-[#004b93]"
+                    : "text-black border-l-4 border-[#004b93]"
                 }`}
               >
                 <h3 className="text-base md:text-lg font-semibold">

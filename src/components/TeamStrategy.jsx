@@ -4,23 +4,23 @@ const teamData = [
   {
     id: 1,
     image: "/pipe.webp",
-    label: " Planning",
+    label: " Vision",
     layout: "md:row-span-2 md:col-span-2",
   },
   {
     id: 2,
-    image: "/workflow.webp",
-    label: " Workforce",
+    image: "/pipee.jpg",
+    label: " Precision",
   },
   {
     id: 3,
     image: "/training.webp",
-    label: "Training",
+    label: "Leadership",
   },
   {
     id: 4,
     image: "/planing1.webp",
-    label: "Automation",
+    label: "Innovation",
     layout: "md:col-span-3",
   },
 ];

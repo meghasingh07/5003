@@ -56,7 +56,7 @@ export default function HeroSection({ onGetQuoteClick }) {
         <h1 className="text-white text-[2.5rem] sm:text-[3rem] md:text-[8rem] lg:text-[11rem] font-extrabold leading-[1.1] md:leading-[1.05]">
           <span className="relative inline-block mr-2">
             <span className="relative z-10">
-              <AnimatedLetters text="Pipe-Making" delayStart={0} />
+              <AnimatedLetters text="Precision" delayStart={0} />
             </span>
             <img
               src="/underline.png"
@@ -67,11 +67,11 @@ export default function HeroSection({ onGetQuoteClick }) {
             />
           </span>
           <span className="inline-block">
-            <AnimatedLetters text="With" delayStart={0.4} />
+            <AnimatedLetters text="Machines" delayStart={0.4} />
           </span>
           <span className="block">
             <AnimatedLetters
-              text="Superior &nbsp; Machinery"
+              text="for &nbsp;Pipe &nbsp;Fitting"
               delayStart={0.8}
             />
           </span>

@@ -4,9 +4,8 @@ import "./hero.css";
 
 const NewsletterSection = () => {
   return (
-    <div className="bg-white text-white px-4 py-10 md:py-20">
+    <div className="bg-white text-white px-4  md:py-15">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-       
         <div className="w-full md:w-1/2 text-center md:text-left">
           <p className="text-sm tracking-widest text-blue-800 mb-2 uppercase">
             Newsletter
@@ -27,12 +26,10 @@ const NewsletterSection = () => {
               className="bg-transparent w-full px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
             />
             <button className="custom-button bg-blue-800 hover:bg-blue-600 transition-colors duration-300 ml-2 w-10 h-10 flex items-center justify-center">
-  <span className="text-white text-base">→</span>
-</button>
-
+              <span className="text-white text-base">→</span>
+            </button>
           </div>
 
-         
           <div className="flex gap-5">
             <FaInstagram
               className="text-blue-800 hover:scale-110 transition-transform duration-300 cursor-pointer"

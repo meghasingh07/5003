@@ -44,9 +44,9 @@ export default function Rotating() {
       >
         <div className="absolute inset-0 bg-black/40 z-0" />
         <h1 className="relative z-10 text-white text-3xl md:text-5xl font-bold text-center px-6 leading-snug">
-          Technology-Driven Machines
+        Specialized Machines for 
           <br />
-          Create Pipes That Build Nations
+          Pipe Fittings Manufacturers
         </h1>
       </div>
 
