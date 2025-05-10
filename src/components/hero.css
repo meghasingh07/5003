@@ -22,3 +22,39 @@
 .custom-button{
   border-radius: 50%;
 }
+.build-button {
+  padding: 1rem 2.5rem;
+  background-color: white;
+  border: 2px solid #004b93;
+  color: black;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.build-button:active{
+  transform: scale(0.95);  
+}
+
+.build-button:hover {
+  background-color: #004b93;
+  color: white;
+  transform: scale(1.05) translateY(-0.25rem); 
+}
+/* Add this to your hero.css file */
+.word-slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
