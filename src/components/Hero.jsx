@@ -52,7 +52,7 @@ export default function HeroSection({ onGetQuoteClick }) {
         />
       </div>
 
-      <div className="relative z-10 h-full text-[1rem] sm:text-[1rem] md:text-[1.5rem] flex flex-col justify-center px-6 md:px-16 max-w-7xl pt-32">
+      <div className="relative z-10 h-full text-[0.8rem] sm:text-[1rem] md:text-[1.5rem] flex flex-col justify-center px-6 md:px-16 max-w-7xl pt-32">
         <h1 className="text-white text-[2.5rem] sm:text-[3rem] md:text-[8rem] lg:text-[11rem] font-extrabold leading-[1.1] md:leading-[1.05]">
           <span className="relative inline-block mr-2">
             <span className="relative z-10">
