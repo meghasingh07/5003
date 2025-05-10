@@ -8,6 +8,9 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import News from "./pages/News";
 import Enquiry from "./pages/Enquiry";
+import Disclaimer from "./pages/Disclaimer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/products/:slug" element={<ProductDetail />} />
         <Route path="/news" element={<News />} />
         <Route path="/enquiry" element={<Enquiry/>}/>
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
     </Router>
   );

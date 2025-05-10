@@ -45,7 +45,7 @@ export default function NavBarTop() {
           Contact us
         </span>
         <div className="border-l border-white/40 h-5"></div>
-        
+
         <div className="relative z-50" ref={dropdownRef}>
           <div
             className="flex items-center gap-1 cursor-pointer"
@@ -56,13 +56,20 @@ export default function NavBarTop() {
           {isDropdownOpen && (
             <div className="absolute right-0 top-full mt-2 w-48 bg-white text-black rounded-md shadow-lg z-[100]">
               <ul className="divide-y divide-gray-200">
-                <li className="p-3 hover:bg-gray-100 cursor-pointer">
-                 Disclaimer
+                <li
+                  className="p-3 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => (window.location.href = "/disclaimer")}
+                >
+                  Disclaimer
                 </li>
-                <li className="p-3 hover:bg-gray-100 cursor-pointer">
+                <li
+                  className="p-3 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => (window.location.href = "/privacy-policy")}
+                >
                   Privacy Policies
                 </li>
-                <li className="p-3 hover:bg-gray-100 cursor-pointer">
+                <li className="p-3 hover:bg-gray-100 cursor-pointer"
+                onClick={() => (window.location.href = "/terms-and-conditions")}>
                   Terms and Conditions
                 </li>
               </ul>

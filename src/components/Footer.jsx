@@ -144,14 +144,17 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-[#004b93] transition">
-              Privacy
+            <a href="/disclaimer" className="hover:text-[#004b93] transition">
+              Disclaimer
             </a>
-            <a href="#" className="hover:text-[#004b93] transition">
-              Terms
+            <a
+              href="/privacy-policy"
+              className="hover:text-[#004b93] transition"
+            >
+              Privacy Policy
             </a>
-            <a href="#" className="hover:text-[#004b93] transition">
-              Sitemap
+             <a href="/terms-and-conditions" className="hover:text-[#004b93] transition">
+              Terms and Conditions
             </a>
           </div>
         </div>

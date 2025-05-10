@@ -71,7 +71,7 @@ export default function HeroSection({ onGetQuoteClick }) {
           </span>
           <span className="block">
             <AnimatedLetters
-              text="for &nbsp;Pipe &nbsp;Fitting"
+              text="for &nbsp;Pipe &nbsp;Fittings"
               delayStart={0.8}
             />
           </span>
