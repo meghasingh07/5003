@@ -34,7 +34,7 @@ const termsData = [
 
 const AccordionItem = ({ index, title, content, isOpen, setOpenIndex }) => {
   const handleToggle = () => {
-    setOpenIndex(isOpen ? null : index); // Close the accordion if already open, else open this one
+    setOpenIndex(isOpen ? null : index);
   };
 
   return (
@@ -42,14 +42,13 @@ const AccordionItem = ({ index, title, content, isOpen, setOpenIndex }) => {
       <button
         onClick={handleToggle}
         className={`w-full text-left py-4 px-6 focus:outline-none flex justify-between items-center transition-all duration-300 ${
-          isOpen ? "bg-blue-100" : "bg-white hover:bg-gray-50"
+          isOpen ? "bg-sky-100" : "bg-white hover:bg-gray-50"
         }`}
       >
-        <span className="text-blue-600 text-lg font-medium">{title}</span>
+        <span className="text-sky-600 text-lg font-medium">{title}</span>
         <span className="text-gray-400 text-2xl">{isOpen ? "−" : "+"}</span>
       </button>
 
-      {/* Only animate the content when it's open */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -69,27 +68,26 @@ const AccordionItem = ({ index, title, content, isOpen, setOpenIndex }) => {
 };
 
 const TermsAndConditions = () => {
-  const [openIndex, setOpenIndex] = useState(null); // Track the open accordion item index
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div className="bg-gray-700 min-h-screen flex flex-col">
+    <div className="bg-blue-300 min-h-screen flex flex-col">
       <NavBarTop />
       <NavBarMain />
 
       <main className="flex-grow px-4 md:px-20 py-12 flex justify-center items-start">
-        {/* Only animate the motion div for the content */}
-        <div className="max-w-4xl w-full bg-white rounded-lg shadow-xl overflow-hidden">
+        <div className="max-w-4xl w-full bg-white rounded-lg shadow-xl overflow-hidden text-gray-800">
           {/* Header Bar */}
-          <div className="py-4 px-6 bg-blue-600">
-            <h1 className="text-black text-3xl font-bold sm:text-2xl md:text-3xl">
+          <div className="py-4 px-6 bg-sky-500">
+            <h1 className="text-white text-3xl font-bold sm:text-2xl md:text-3xl">
               Terms & Conditions
             </h1>
           </div>
 
           {/* Divider */}
-          <div className="h-1 bg-blue-900 w-full"></div>
+          <div className="h-1 bg-sky-700 w-full"></div>
 
-          {/* Accordion Content */}
+          {/* Accordion */}
           <div className="divide-y divide-gray-200">
             {termsData.map((term, index) => (
               <AccordionItem

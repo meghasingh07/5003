@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import NavBarTop from "../components/NavBarTop";
 import NavBarMain from "../components/NavBarMain";
 
 const Disclaimer = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-
   return (
-    <div className={`min-h-screen flex flex-col bg-gray-700`}>
+    <div className="min-h-screen flex flex-col bg-blue-300">
       <NavBarTop />
       <NavBarMain />
 
@@ -19,15 +15,15 @@ const Disclaimer = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className={`bg-white max-w-4xl w-full rounded-lg shadow-lg overflow-hidden ${darkMode ? "text-white" : "text-gray-800"}`}
+          className="bg-white max-w-4xl w-full rounded-lg shadow-lg overflow-hidden text-gray-800"
         >
           {/* Header Bar */}
-          <div className={`py-4 px-6 ${darkMode ? "bg-gray-800" : "bg-blue-600"}`}>
-            <h1 className="text-black text-3xl font-bold">Disclaimer</h1>
+          <div className="py-4 px-6 bg-sky-500">
+            <h1 className="text-white text-3xl font-bold">Disclaimer</h1>
           </div>
 
           {/* Horizontal Rule */}
-          <div className="h-1 bg-blue-900 w-full"></div>
+          <div className="h-1 bg-sky-700 w-full"></div>
 
           {/* Content */}
           <div className="px-6 py-8 text-justify space-y-5 text-base leading-relaxed">
