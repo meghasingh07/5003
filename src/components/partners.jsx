@@ -3,18 +3,19 @@ import { motion } from "framer-motion";
 
 const partners = [
   {
-    name: "Daniel James",
-    company: "Stripe",
+    name: "Sneha Mehta",
+    company: "Vihan India Pvt. Ltd.",
     image: "/team-1.jpg",
-    text: "By enrolling in the Four Bear Program, UM guarantees you will graduate in four years with a bachelor’s degree. Discover the global city—filled with inspiration, opportunities to explore.",
+    text: "Vihan India has played a vital role in driving innovation and delivering reliable solutions tailored to our business needs. Their support has been instrumental in our growth.",
   },
   {
-    name: "Shane Dore",
-    company: "PayPal",
+    name: "Rajesh Kumar",
+    company: "Vihan India Pvt. Ltd.",
     image: "/team-3.jpg",
-    text: "By enrolling in the Four Bear Program, UM guarantees you will graduate in four years with a bachelor’s degree. Discover the global city—filled with inspiration, opportunities to explore.",
+    text: "Working with Vihan India has been an outstanding experience. Their commitment to excellence and customer satisfaction sets them apart in the industry.",
   },
 ];
+
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
